@@ -1,5 +1,9 @@
 #install influxdb and grafana
 
+#https://www.influxdata.com/downloads/#influxdb
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.2.0.x86_64.rpm
 sudo yum localinstall influxdb-1.2.0.x86_64.rpm
+
+#http://grafana.org/download/
+https://grafanarel.s3.amazonaws.com/builds/grafana-4.1.1-1484211277.x86_64.rpm
 
