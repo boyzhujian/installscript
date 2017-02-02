@@ -3,8 +3,7 @@
 #https://www.influxdata.com/downloads/#influxdb
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.2.0.x86_64.rpm
 sudo yum localinstall influxdb-1.2.0.x86_64.rpm
-
-#edit  /etc/influxdb/influxdb.conf
+#edit  /etc/influxdb/influxdb.conf     webconsole http://127.0.0.1:8083/
 
 
 
@@ -15,5 +14,6 @@ rpm -ivh grafana-4.1.1-1484211277.x86_64.rpm
 #edit  /etc/grafana/grafana.ini
 /bin/systemctl enable grafana-server.service
 /bin/systemctl start grafana-server.service
+#web console  http://127.0.0.1:3000/
 
 
