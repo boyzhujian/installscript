@@ -1,5 +1,8 @@
-#install influxdb and grafana
+#install golang
+wget https://storage.googleapis.com/golang/go1.7.5.linux-amd64.tar.gz
 
+
+#install influxdb and grafana
 #https://www.influxdata.com/downloads/#influxdb
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.2.0.x86_64.rpm
 sudo yum localinstall influxdb-1.2.0.x86_64.rpm
