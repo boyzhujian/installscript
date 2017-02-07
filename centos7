@@ -32,3 +32,8 @@ vim relay.toml
 $GOPATH/bin/influxdb-relay -config relay.toml
 
 
+
+#install telegraf
+wget https://dl.influxdata.com/telegraf/releases/telegraf-1.2.1.x86_64.rpm
+sudo yum localinstall telegraf-1.2.1.x86_64.rpm
+
