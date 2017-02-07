@@ -23,3 +23,12 @@ rpm -ivh grafana-4.1.1-1484211277.x86_64.rpm
 #web console  http://127.0.0.1:3000/
 
 
+#install influxdb-relay
+go get -u github.com/influxdata/influxdb-relay
+# Edit your configuration file
+cp $GOPATH/src/github.com/influxdata/influxdb-relay/sample.toml ./relay.toml
+vim relay.toml
+# Start relay! 
+$GOPATH/bin/influxdb-relay -config relay.toml
+
+
