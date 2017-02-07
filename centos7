@@ -4,6 +4,9 @@
 wget https://dl.influxdata.com/influxdb/releases/influxdb-1.2.0.x86_64.rpm
 sudo yum localinstall influxdb-1.2.0.x86_64.rpm
 #edit  /etc/influxdb/influxdb.conf     webconsole http://127.0.0.1:8083/
+#chown -R  influxdb /var/lib/influxdb/
+# systemctl start influxd
+# systemctl status  influxd
 
 
 
