@@ -1,4 +1,4 @@
-usage: just clone telegrafconfig,remove unwanted input input plugin,then run 
+#####  usage: just clone telegrafconfig,remove unwanted input input plugin,then run 
 telegraf --config-directory  telegrafconfig   
 default output is influxdb 
 
