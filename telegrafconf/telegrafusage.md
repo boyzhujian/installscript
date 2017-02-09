@@ -1,3 +1,8 @@
+usage: just clone telegrafconfig,remove unwanted input input plugin,then run 
+telegraf --config-directory  telegrafconfig   
+default output is influxdb 
+
+  
   telegraf [commands|flags]
 
 The commands & flags are:
