@@ -1,0 +1,17 @@
+# [[inputs.apache]]
+#   ## An array of Apache status URI to gather stats.
+#   ## Default is "http://localhost/server-status?auto".
+#   urls = ["http://localhost/server-status?auto"]
+#   ## user credentials for basic HTTP authentication
+#   username = "myuser"
+#   password = "mypassword"
+#
+#   ## Timeout to the complete conection and reponse time in seconds
+#   response_timeout = "25s" ## default to 5 seconds
+#
+#   ## Optional SSL Config
+#   # ssl_ca = "/etc/telegraf/ca.pem"
+#   # ssl_cert = "/etc/telegraf/cert.pem"
+#   # ssl_key = "/etc/telegraf/key.pem"
+#   ## Use SSL but skip chain & host verification
+#   # insecure_skip_verify = false
