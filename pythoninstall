@@ -1,0 +1,9 @@
+
+
+#install requests
+#http://docs.python-requests.org/en/master/user/install/#install
+pip install requests
+OR
+git clone git://github.com/kennethreitz/requests.git
+OR 
+curl -OL https://github.com/kennethreitz/requests/tarball/master
