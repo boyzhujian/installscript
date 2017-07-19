@@ -1,0 +1,5 @@
+wget http://mirrors.neusoft.edu.cn/mariadb/mariadb-10.2.7/bintar-linux-x86_64/mariadb-10.2.7-linux-x86_64.tar.gz
+
+
+#https://mariadb.com/kb/en/mariadb/installing-mariadb-binary-tarballs/
+#https://downloads.mariadb.org/
