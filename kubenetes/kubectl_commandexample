@@ -3,3 +3,7 @@
 
 kubectl run  hello-nginx  --image=nginx --port 80
 kubectl expose deployment hello-nginx --type=NodePort
+
+
+check runing dns container
+kubectl get pods --namespace=kube-system -l k8s-app=kube-dns
