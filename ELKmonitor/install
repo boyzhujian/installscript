@@ -1,0 +1,19 @@
+#quick simple 
+#https://elk-docker.readthedocs.io/#prerequisites
+
+#host tweak 
+sysctl vm.max_map_count
+sysctl -w vm.max_map_count=262144
+
+#install dockernized elk
+docker pull sebp/elk
+docker run -p 5601:5601 -p 9200:9200 -p 5044:5044   -v dockerelkdata:/var/lib/elasticsearch --name elk sebp/elk
+
+#install filebeat on client
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.5.2-x86_64.rpm
+rpm -ivh filebeat-5.5.2-x86_64.rpm
+systemctl status -l filebeat
+
+sudo systemctl enable filebeat
+
+sudo systemctl start filebeat
