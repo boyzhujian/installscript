@@ -10,3 +10,17 @@
   # run
   systemctl status -l filebeat
   systemctl enable filebeat
+  
+  
+ # sample config   vi /etc/filebeat/filebeat.yml
+filebeat.prospectors:
+- input_type: log
+
+
+  paths:
+    - /var/log/damontestlog/*.log
+
+output.elasticsearch:
+  hosts: ["127.0.0.1:9200"]
+
+
