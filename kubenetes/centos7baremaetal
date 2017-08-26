@@ -1,10 +1,18 @@
 #prolbelm no ifconfig   use ip addr or yum install net-tools
 #for example 
-centos-kubermaster1  192.168.3.40
+#use hostnamectl set-hostname younewhostname    .use systemctl restart network after ip set 
+centos-kubemaster1  192.168.3.40
 centos-kubeminon1    192.168.3.41
 centos-kubeminon2    192.168.3.42
 centos-kubeminon3    192.168.3.43
 
 change to aliyun repo if in china 
+/etc/yum.repos.d/
+[kubernetes] 
+name=Kubernetes 
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64 
+enabled=1 
+gpgcheck=0
+
 on master:
 yum install kubernetes etcd flannel
