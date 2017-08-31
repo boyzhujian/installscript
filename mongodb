@@ -1,4 +1,4 @@
 # https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel62-3.4.6.tgz
 
-docker run --name some-mongo -v /my/own/datadir:/data/db -d mongo:tag
-docker run --link some_mongo_container:mongo -p 8081:8081 mongo-express
+docker run --name damonmongo -v /export/home/jiazhu3/dockerdata/mongodata:/data/db -d mongo
+docker run --link damonmongo:mongo -p 8081:8081 mongo-express
