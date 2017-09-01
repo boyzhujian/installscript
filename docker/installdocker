@@ -20,5 +20,11 @@ is equal
   "hosts": ["tcp://192.168.59.3:2376"]
 }
  /bin/dockerd --config-file /etc/default/dockerd.json
-
+ 
+ 
+ centos7 
+ use systemctl manage dockerd add -H tcp://192.168.59.3:2376
+/etc/systemd/system/multi-user.target.wants/docker.service
+ systemctl daemon-reload
+systemctl restart docker
 
