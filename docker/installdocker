@@ -8,9 +8,12 @@
  
  
  
+https://docs.docker.com/engine/admin/#configure-the-docker-daemon
+
  /bin/dockerd --config-file /etc/default/dockerd.json
  example json file
  {
   "debug": false,
   "hosts": ["tcp://10.255.73.134:2376","unix:///var/run/docker.sock"]
 }
+
