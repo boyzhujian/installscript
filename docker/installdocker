@@ -10,10 +10,15 @@
  
 https://docs.docker.com/engine/admin/#configure-the-docker-daemon
 
- /bin/dockerd --config-file /etc/default/dockerd.json
- example json file
- {
-  "debug": false,
-  "hosts": ["tcp://10.255.73.134:2376","unix:///var/run/docker.sock"]
+dockerd -D --tls=true --tlscert=/var/docker/server.pem --tlskey=/var/docker/serverkey.pem -H tcp://192.168.59.3:2376
+is equal 
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/var/docker/server.pem",
+  "tlskey": "/var/docker/serverkey.pem",
+  "hosts": ["tcp://192.168.59.3:2376"]
 }
+ /bin/dockerd --config-file /etc/default/dockerd.json
+
 
