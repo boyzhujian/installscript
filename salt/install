@@ -1,0 +1,9 @@
+#install by salt-bootstrap
+#https://github.com/saltstack/salt-bootstrap/tree/develop
+
+wget -O bootstrap-salt.sh https://bootstrap.saltstack.com
+sh bootstrap-salt.sh
+
+#one webui
+git clone https://github.com/duliang123/SST
+sst_auto_install.sh
