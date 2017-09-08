@@ -4,6 +4,12 @@
 wget -O bootstrap-salt.sh https://bootstrap.saltstack.com
 sh bootstrap-salt.sh
 
+
+
 #one webui
 git clone https://github.com/duliang123/SST
 sst_auto_install.sh
+
+
+
+#using commandline https://www.linode.com/docs/applications/configuration-management/install-and-configure-salt-master-and-minion-servers
