@@ -46,3 +46,10 @@ wget https://dl.influxdata.com/kapacitor/releases/kapacitor-1.2.0.x86_64.rpm
 #install consul
 wget https://releases.hashicorp.com/consul/0.7.4/consul_0.7.4_linux_amd64.zip?_ga=1.165949943.895780990.1486626526
 
+
+#install kvm
+
+yum install qemu-kvm libvirt virt-install bridge-utils -y
+systemctl start libvirtd
+yum install virt-manager
+
