@@ -1,0 +1,4 @@
+:2015 {
+proxy / localhost:8080
+tls self_signed
+}
