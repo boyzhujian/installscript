@@ -1,0 +1,14 @@
+Dockerfile 基本的语法是
+
+使用#来注释
+FROM 指令告诉 Docker 使用哪个镜像作为基础，这里我从自己的私有镜像库获取
+MAINTAINER：设置该镜像的作者
+RUN开头的指令会在创建中运行，比如安装一个软件包，在这里使用 yum 来安装了一些软件，在shell或者exec的环境下执行的命令。RUN指令会在新创建的镜像上添加新的层面，接下来提交的结果用在Dockerfile的下一条指令中
+ADD：复制文件指令。它有两个参数<source>和<destination>。destination是容器内的路径。source可以是URL或者是启动配置上下文中的一个文件
+CMD：提供了容器默认的执行命令。 Dockerfile只允许使用一次CMD指令。 使用多个CMD会抵消之前所有的指令，只有最后一个指令生效
+EXPOSE：指定容器在运行时监听的端口
+ENTRYPOINT：配置给容器一个可执行的命令，这意味着在每次使用镜像创建容器时一个特定的应用程序可以被设置为默认程序。同时也意味着该镜像每次被调用时仅能运行指定的应用。类似于CMD，Docker只允许一个ENTRYPOINT，多个ENTRYPOINT会抵消之前所有的指令，只执行最后的ENTRYPOINT指令
+WORKDIR：指定RUN、CMD与ENTRYPOINT命令的工作目录
+ENV：设置环境变量。它们使用键值对，增加运行程序的灵活性
+USER：镜像正在运行时设置一个UID
+VOLUME：授权访问从容器内到主机上的目录
