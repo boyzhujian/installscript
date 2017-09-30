@@ -41,4 +41,20 @@ virsh语法： virsh [COMMAND] [ARGS...]
     suspend           #挂起一个虚拟机  
     vcpuinfo          #虚拟机的cpu信息  
     version           #显示virsh版本  
+    
+    
+  https://wiki.archlinux.org/index.php/Libvirt_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)  
+  
+  virt-install  \
+  --name arch-linux_testing \
+  --memory 1024             \ 
+  --vcpus=2,maxvcpus=4      \
+  --cpu host                \
+  --cdrom $HOME/Downloads/arch-linux_install.iso \
+  --disk size=2,format=raw  \
+  --network user            \
+  --virt-type kvm
+  
+  
+  qemu-img create -f qcow2 -o backing_file=<path to backing image>,backing_fmt=qcow2 <disk name> <disk size>
 
