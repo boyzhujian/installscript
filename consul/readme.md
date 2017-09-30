@@ -1,9 +1,12 @@
 
-
+#command
+```
 consul agent 
 -config-file=/export/home/jiazhu3/consul/bootstrap.json 
 -config-dir=/export/home/jiazhu3/consul/consul.d/      -bind=10.255.73.132
+```
 
+#config
 ```
 {
     "bootstrap": true,
