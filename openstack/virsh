@@ -57,4 +57,10 @@ virsh语法： virsh [COMMAND] [ARGS...]
   
   
   qemu-img create -f qcow2 -o backing_file=<path to backing image>,backing_fmt=qcow2 <disk name> <disk size>
+  
+  
+  
+  
+  
+  http://libvirt.org/devguide.html
 
