@@ -1,0 +1,7 @@
+
+#first pack mulitple vmdk files to one 
+vmware-vdiskmanager -r "/mnt/sansumg/vmimg/win10x64/cisco.vmdk" -t 0  "/run/media/root/a935cb6d-aee9-428c-8b6a-6d690e011e79/vmimg/cisco.vmdk"
+
+
+#second convert one vmdk files to qcow2 image
+qemu-img convert  -p  -O qcow2  cisco.vmdk  cisco.qcow2
