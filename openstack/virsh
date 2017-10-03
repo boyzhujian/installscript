@@ -1,3 +1,6 @@
+virsh list  --all
+virsh start domainname
+
 virsh 
 
 #shell wrapper
