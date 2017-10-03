@@ -1,0 +1,9 @@
+
+#http://blog.chinaunix.net/xmlrpc.php?r=blog/article&uid=7934175&id=5679365
+
+    libvirt：操作和管理KVM虚机的虚拟化 API，使用 C 语言编写，可以由 Python,Ruby, Perl, PHP, Java 等语言调用。可以操作包括 KVM，vmware，XEN，Hyper-v, LXC 等 Hypervisor。
+    Virsh：基于 libvirt 的 命令行工具 （CLI）
+    Virt-Manager：基于 libvirt 的 GUI 工具
+    virt-v2v：虚机格式迁移工具
+    virt-* 工具：包括 Virt-install （创建KVM虚机的命令行工具）， Virt-viewer （连接到虚机屏幕的工具），Virt-clone（虚机克隆工具），virt-top 等
+    sVirt：安全工具
