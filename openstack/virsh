@@ -1,3 +1,9 @@
+#one line command to install ,need prepare img and bridge br1 first
+virt-install  --connect qemu:///system   --virt-type kvm  --name centos7001 \
+ --ram 2048 --vcpus 2  --cdrom /mnt/sda2/isofiles/centos7.iso --disk /mnt/sda2/virshimg/centos7001.qcow2 --network bridge=br1  --os-variant rhel7.2
+
+
+
 virsh list  --all
 virsh start domainname
 
