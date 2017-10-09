@@ -27,9 +27,10 @@ consul agent
 
 
 
-Ports Used
+## Ports Used
 
 Consul requires up to 5 different ports to work properly, some on TCP, UDP, or both protocols. Below we document the requirements for each port.
+
 ```
 Server RPC (Default 8300). This is used by servers to handle incoming requests from other agents. TCP only.
 Serf LAN (Default 8301). This is used to handle gossip in the LAN. Required by all agents. TCP and UDP.
