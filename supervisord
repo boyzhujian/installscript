@@ -1,0 +1,10 @@
+
+# add supervisord to init script
+https://serverfault.com/questions/96499/how-to-automatically-start-supervisord-on-linux-ubuntu
+```
+curl https://gist.github.com/howthebodyworks/176149/raw/88d0d68c4af22a7474ad1d011659ea2d27e35b8d/supervisord.sh > /etc/init.d/supervisord
+
+```
+
+
+# go version   https://github.com/ochinchina/supervisord
