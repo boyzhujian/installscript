@@ -64,6 +64,7 @@ virsh语法： virsh [COMMAND] [ARGS...]
   --network user            \
   --virt-type kvm
   
+  https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-guest_virtual_machine_installation_overview-creating_guests_with_virt_install
   
   qemu-img create -f qcow2 -o backing_file=<path to backing image>,backing_fmt=qcow2 <disk name> <disk size>
   
