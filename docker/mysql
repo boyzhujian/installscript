@@ -1,15 +1,13 @@
 
 
 
-$ docker run --name damon-mariadb 
+$ docker run --name damon-mariadb    
+-v /home/jiazhu3/dockerdata/mysql/data:/var/lib/mysql 
+-v /home/jiazhu3/dockerdata/mysql:/etc/mysql/conf.d
+-d mariadb:tag
+-e MYSQL_ROOT_PASSWORD_FILE=/home/jiazhu3/dockerdata/mysql/mysqlrootpassfile 
 
--v /my/own/datadir:/var/lib/mysql 
--e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag
-
--v /my/custom:/etc/mysql/conf.d
-
-hide secret from commandline
--e MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql-root 
+#-e MYSQL_ROOT_PASSWORD=my-secret-pw 
 
 
 #https://github.com/phpmyadmin/docker
