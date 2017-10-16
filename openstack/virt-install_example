@@ -1,0 +1,38 @@
+# https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-virtual_machine_installation-virt-install-virt-manager-matrix
+
+
+#https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/virtualization_deployment_and_administration_guide/sect-guest_virtual_machine_installation_overview-creating_guests_with_virt_install
+# Installing a virtual machine from an ISO image
+virt-install \ 
+  --name guest1-rhel7 \ 
+  --memory 2048 \ 
+  --vcpus 2 \ 
+  --disk size=8 \ 
+  --cdrom /path/to/rhel7.iso \ 
+  --os-variant rhel7 
+ 
+#Importing a virtual machine image
+ virt-install \ 
+  --name guest1-rhel7 \ 
+  --memory 2048 \ 
+  --vcpus 2 \ 
+  --disk /path/to/imported/disk.qcow \ 
+  --import \ 
+  --os-variant rhel7 
+  
+ 
+ 
+ 
+ 
+ --name
+ --ram
+ --disk
+ --filesystem
+ --nodisks
+ --file
+ --location
+ --pxe
+ --vcpus
+ --networks
+ --os-variant
+ --graphics, --nographics
