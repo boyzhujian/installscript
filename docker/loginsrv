@@ -1,0 +1,1 @@
+docker run -d -p 9001:8080 -e LOGINSRV_JWT_SECRET=my_secret -e LOGINSRV_BACKEND=provider=simple,bob=secret tarent/loginsrv
