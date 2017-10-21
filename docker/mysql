@@ -2,9 +2,10 @@
 
 
 $ docker run --name damon-mariadb    
--v /home/jiazhu3/dockerdata/mysql/data:/var/lib/mysql 
--v /home/jiazhu3/dockerdata/mysql:/etc/mysql/conf.d
--d mariadb:tag
+-v /home/jiazhu3/dockerdata/mysql/data:/var/lib/mysql  \ 
+-v /home/jiazhu3/dockerdata/mysql:/etc/mysql/conf.d    \
+-d mariadb:latest                                      \
+-p  3306:3306       
 -e MYSQL_ROOT_PASSWORD_FILE=/home/jiazhu3/dockerdata/mysql/mysqlrootpassfile 
 
 #-e MYSQL_ROOT_PASSWORD=my-secret-pw 
@@ -12,3 +13,4 @@ $ docker run --name damon-mariadb
 
 #https://github.com/phpmyadmin/docker
 docker run --name myadmin -d -e PMA_HOST=10.255.73.132 -p 8090:80    phpmyadmin/phpmyadmin
+docker run --name myadmin -d --link damon-mariadb -p 8090:80    PMA_HOST=127.0.0.1 phpmyadmin/phpmyadmin
