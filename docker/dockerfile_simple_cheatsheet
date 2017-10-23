@@ -15,3 +15,11 @@ VOLUME：授权访问从容器内到主机上的目录
 
 
 https://docs.docker.com/engine/reference/builder/
+example 
+ADD . /app
+
+# Define working directory.
+WORKDIR /app
+
+# Define default command.
+CMD ["/env/bin/python", "main.py"]
