@@ -1,3 +1,5 @@
+#  this is for python3  
+
 FROM ubuntu:16.04
 
 ENV ORACLE_HOME /opt/oracle/instantclient_12_2
@@ -13,3 +15,5 @@ RUN \
     ln -s /usr/bin/pip3 /usr/bin/pip && \
     pip install cx_Oracle && \
     pip install --upgrade pip
+    
+    
