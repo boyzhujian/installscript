@@ -17,3 +17,21 @@ RUN \
     pip install --upgrade pip
     
     
+
+
+
+
+FROM python:2
+
+ENV ORACLE_HOME /opt/oracle/instantclient_12_2
+ENV LD_RUN_PATH=$ORACLE_HOME
+ENV LD_LIBRARY_PATH=$ORACLE_HOME
+COPY instantclient/* /tmp/
+COPY generatereport.py /
+RUN \
+    apt-get update && apt-get install -y unzip python-pip  libaio1 && rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /opt/oracle && \
+    unzip "/tmp/instantclient*.zip" -d /opt/oracle && \
+    ln -s $ORACLE_HOME/libclntsh.so.12.1 $ORACLE_HOME/libclntsh.so && \
+    pip install cx_Oracle && \
+    pip install --upgrade pip
