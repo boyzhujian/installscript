@@ -1,4 +1,7 @@
 
+https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples
+
+
 #  change docker compose to shell
 https://github.com/dockito/compose2bash
 compose2bash -yml=examples/docker-compose.yml -output=examples/output -app=myapp
