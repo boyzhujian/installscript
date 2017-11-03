@@ -1,0 +1,26 @@
+# first download driver
+http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
+
+
+
+example oci8.pc
+Example for Linux
+```
+prefix=/devel/target/XXXXXXXXXXXXXXXXXXXXXXXXXX
+exec_prefix=${prefix}
+libdir=/usr/lib/oracle/11.2/client64/lib
+includedir=/usr/include/oracle/11.2/client64
+
+glib_genmarshal=glib-genmarshal
+gobject_query=gobject-query
+glib_mkenums=glib-mkenums
+
+Name: oci8
+Description: oci8 library
+Libs: -L${libdir} -lclntsh
+Cflags: -I${includedir}
+Version: 11.2
+```
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/oracle/11.2/client64/lib
