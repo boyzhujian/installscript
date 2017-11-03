@@ -1,3 +1,8 @@
+easy_install supervisor   or
+pip install supervisor
+
+echo_supervisord_conf > /etc/supervisord.conf
+
 
 # add supervisord to init script
 https://serverfault.com/questions/96499/how-to-automatically-start-supervisord-on-linux-ubuntu
