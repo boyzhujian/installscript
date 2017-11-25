@@ -1,56 +1,12 @@
-what is imargs ?    http://ipxe.org/cmd/imgargs
-
 #!ipxe
-dhcp
-echo Starting Ubuntu x64 installer for ${hostname}
-set base-url http://archive.ubuntu.com/ubuntu/dists/lucid/main/installer-amd64/current/images/netboot/ubuntu-installer/amd64
-kernel ${base-url}/linux
-initrd ${base-url}/initrd.gz
-#imgargs linux auto=true url=http://yourserver/some/path/preseed.cfg
-boot || 
-# If everything failed, give the user some options
-echo Boot from ${base-url} failed
-prompt --key 0x197e --timeout 2000 Press F12 to investigate || exit
-shell
 
-
-
-:ubuntu
-kernel http://${fog-ip}/${fog-webroot}/images/ISO/LINUX/ud1710x64/casper/vmlinuz.efi
-initrd http://${fog-ip}/${fog-webroot}/images/ISO/LINUX/ud1710x64/casper/initrd.lz
-imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=${fog-ip}:/images/ISO/LINUX/ud1710x64 quiet splash ip=dhcp rw
-boot || goto failed
-goto start
-
-
-kernel tftp://${fog-ip}/os/ubuntu/ud1710x64/casper/vmlinuz.efi
-initrd tftp://${fog-ip}/os/ubuntu/ud1710x64/casper/initrd.lz
-imgargs vmlinuz initrd=initrd.gz root=/dev/nfs netboot=nfs nfsroot=${fog-ip}:/images/os/ubuntu/ud1710x64/ locale=en_US.UTF-8 ip=dhcp rw
-
-
-#!ipxe
-  
-  set server_ip 192.168.100.1
-  set nfs_path /srv/nfs/ubuntu-14.04.1-desktop-amd64
-  kernel nfs://${server_ip}${nfs_path}/casper/vmlinuz.efi || read void
-  initrd nfs://${server_ip}${nfs_path}/casper/initrd.lz || read void
-  imgargs vmlinuz.efi initrd=initrd.lz root=/dev/nfs boot=casper netboot=nfs nfsroot=${server_ip}:${nfs_path} ip=dhcp splash quiet -- || read void
-  boot || read void
   
   
-  
-
-set base-url http://192.168.3.112/ubuntu-installer/ubuntu1604/
-kernel ${base-url}/casper/vmlinuz.efi
-initrd ${base-url}/casper/initrd.lz
-imargs fetch=${base-url}/casper/filesystem.squashfs
-#imgargs root=/dev/nfs netboot=nfs nfsroot=http://192.168.3.112/ubuntu-installer/ubuntu1604/
-#imgargs  vmlinuz.efi initrd=initrd.lz  linux auto=true  url=${base-url}/preseed.cfg 
-boot ||
-
-
+prompt -k 0x197e -t 2000 Press F12 to install Ubuntu.. || exit
 
 kernel tftp://192.168.3.112/ubuntu-installer/ubuntu1604/vmlinuz.efi
 initrd tftp://192.168.3.112/ubuntu-installer/ubuntu1604/initrd.lz
-imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=tftp://192.168.3.112/ubuntu-installer/ubuntu1604/ locale=en_US.UTF-8 keyboard-configuration/layoutcode=us quiet splash ip=dhcp rw
+imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=192.168.3.112:/d/pxesrv/files/ubuntu-installer/ubuntu1604/ 
+
+locale=en_US.UTF-8 keyboard-configuration/layoutcode=us quiet splash ip=dhcp rw
 boot
