@@ -10,3 +10,12 @@ boot ||
 echo Boot from ${base-url} failed
 prompt --key 0x197e --timeout 2000 Press F12 to investigate || exit
 shell
+
+
+
+:ubuntu
+kernel http://${fog-ip}/${fog-webroot}/images/ISO/LINUX/ud1710x64/casper/vmlinuz.efi
+initrd http://${fog-ip}/${fog-webroot}/images/ISO/LINUX/ud1710x64/casper/initrd.lz
+imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=${fog-ip}:/images/ISO/LINUX/ud1710x64 quiet splash ip=dhcp rw
+boot || goto failed
+goto start
