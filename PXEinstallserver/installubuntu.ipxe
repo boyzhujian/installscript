@@ -6,7 +6,8 @@ prompt -k 0x197e -t 2000 Press F12 to install Ubuntu.. || exit
 
 kernel tftp://192.168.3.112/ubuntu-installer/ubuntu1604/vmlinuz.efi
 initrd tftp://192.168.3.112/ubuntu-installer/ubuntu1604/initrd.lz
-imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=192.168.3.112:/d/pxesrv/files/ubuntu-installer/ubuntu1604/ 
-
-locale=en_US.UTF-8 keyboard-configuration/layoutcode=us quiet splash ip=dhcp rw
+imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=192.168.3.112:/d/pxesrv/files/ubuntu-installer/ubuntu1604/ locale=en_US.UTF-8 keyboard-configuration/layoutcode=us quiet splash ip=dhcp rw
 boot
+
+
+#note :require tftp dhcp nfs server support 
