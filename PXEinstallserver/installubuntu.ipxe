@@ -43,7 +43,8 @@ imgargs vmlinuz initrd=initrd.gz root=/dev/nfs netboot=nfs nfsroot=${fog-ip}:/im
 set base-url http://192.168.3.112/ubuntu-installer/ubuntu1604/
 kernel ${base-url}/casper/vmlinuz.efi
 initrd ${base-url}/casper/initrd.lz
-imgargs root=/dev/nfs netboot=nfs nfsroot=http://192.168.3.112/ubuntu-installer/ubuntu1604/
+imargs fetch=${base-url}/casper/filesystem.squashfs
+#imgargs root=/dev/nfs netboot=nfs nfsroot=http://192.168.3.112/ubuntu-installer/ubuntu1604/
 #imgargs  vmlinuz.efi initrd=initrd.lz  linux auto=true  url=${base-url}/preseed.cfg 
 boot ||
 
