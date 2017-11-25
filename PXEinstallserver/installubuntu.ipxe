@@ -39,9 +39,9 @@ imgargs vmlinuz initrd=initrd.gz root=/dev/nfs netboot=nfs nfsroot=${fog-ip}:/im
   
   
   
-  # Start debian-installer
-set base-url http://boot.smidsrod.lan/ubuntu-10.04.4-amd64-server
-kernel ${base-url}/install/netboot/ubuntu-installer/amd64/linux
-initrd ${base-url}/install/netboot/ubuntu-installer/amd64/initrd.gz
-imgargs linux auto=true fb=false url=${base-url}/./preseed.cfg DEBCONF_DEBUG=5
+
+set base-url http://192.168.3.112/ubuntu-installer/ubuntu1604/
+kernel ${base-url}/casper/vmlinuz.efi
+initrd ${base-url}/casper/initrd.lz
+imgargs  vmlinuz.efi initrd=initrd.lz  linux auto=true  url=${base-url}/preseed.cfg 
 boot ||
