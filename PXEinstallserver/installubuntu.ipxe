@@ -1,3 +1,5 @@
+what is imargs ?    http://ipxe.org/cmd/imgargs
+
 #!ipxe
 dhcp
 echo Starting Ubuntu x64 installer for ${hostname}
@@ -19,3 +21,18 @@ initrd http://${fog-ip}/${fog-webroot}/images/ISO/LINUX/ud1710x64/casper/initrd.
 imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=${fog-ip}:/images/ISO/LINUX/ud1710x64 quiet splash ip=dhcp rw
 boot || goto failed
 goto start
+
+
+kernel tftp://${fog-ip}/os/ubuntu/ud1710x64/casper/vmlinuz.efi
+initrd tftp://${fog-ip}/os/ubuntu/ud1710x64/casper/initrd.lz
+imgargs vmlinuz initrd=initrd.gz root=/dev/nfs netboot=nfs nfsroot=${fog-ip}:/images/os/ubuntu/ud1710x64/ locale=en_US.UTF-8 ip=dhcp rw
+
+
+#!ipxe
+  
+  set server_ip 192.168.100.1
+  set nfs_path /srv/nfs/ubuntu-14.04.1-desktop-amd64
+  kernel nfs://${server_ip}${nfs_path}/casper/vmlinuz.efi || read void
+  initrd nfs://${server_ip}${nfs_path}/casper/initrd.lz || read void
+  imgargs vmlinuz.efi initrd=initrd.lz root=/dev/nfs boot=casper netboot=nfs nfsroot=${server_ip}:${nfs_path} ip=dhcp splash quiet -- || read void
+  boot || read void
