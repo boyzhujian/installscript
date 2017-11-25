@@ -46,3 +46,10 @@ initrd ${base-url}/casper/initrd.lz
 imgargs root=/dev/nfs netboot=nfs nfsroot=http://192.168.3.112/ubuntu-installer/ubuntu1604/
 #imgargs  vmlinuz.efi initrd=initrd.lz  linux auto=true  url=${base-url}/preseed.cfg 
 boot ||
+
+
+
+kernel tftp://192.168.3.112/ubuntu-installer/ubuntu1604/vmlinuz.efi
+initrd tftp://192.168.3.112/ubuntu-installer/ubuntu1604/initrd.lz
+imgargs vmlinuz.efi root=/dev/nfs boot=casper netboot=nfs nfsroot=tftp://192.168.3.112/ubuntu-installer/ubuntu1604/ locale=en_US.UTF-8 keyboard-configuration/layoutcode=us quiet splash ip=dhcp rw
+boot
