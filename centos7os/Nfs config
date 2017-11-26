@@ -1,1 +1,6 @@
 Nfs config is easy but need human todo 
+There is three way to config
+
+- system-config-nfs
+-  /etc/exports
+- /usr/sbin/exportfs
