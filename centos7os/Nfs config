@@ -37,3 +37,16 @@ NFS服务的主要配置文件为 /etc/exports.
                 no_wdelay：若有写操作则立即执行，应与sync配合使用；
                 subtree：若输��目录是一个子目录，则nfs服务器将检查其父目录的权限(默认设置)；
                 no_subtree：即使输出目录是一个子目录，nfs服务器也不检查其父目录的权限，这样可以提高效率；
+                
+                
+                
+     @nfs-setup
+suppose your PC is on network 192.168.1.0/24, put the following line in /etc/exports
+/tmp/usbmounts/sda1 192.168.1.0/24(rw,sync,no_subtree_check)
+
+or you can run the following on command line:
+
+# exportfs -o rw,sync,no_subtree_check 192.168.1.0/24:/tmp/usbmounts/sda1
+
+Mount nfs on you ubuntu PC:
+# mount -t nfs -o udp <ip of you player>:/tmp/usbmounts/sda1 /mnt
