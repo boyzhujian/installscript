@@ -53,3 +53,14 @@ yum install qemu-kvm libvirt virt-install bridge-utils -y
 systemctl start libvirtd
 yum install virt-manager
 
+
+
+#INSTALL  VLC  MPLAYER
+NEED epel repo
+wget http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+rpm -i install nux-dextop-release-0-5.el7.nux.noarch.rpm 
+yum localinstall nux-dextop-release-0-5.el7.nux.noarch.rpm 
+yum install vlc
+yum install mplayer
+
+
