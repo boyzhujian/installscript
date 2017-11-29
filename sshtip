@@ -5,3 +5,8 @@
  
  #copy sshid 
  ssh-copy-id root@139.162.35.39
+ 
+ 
+ClientAliveInterval 120
+ClientAliveCountMax 600
+Subsystem sftp internal-sftp
