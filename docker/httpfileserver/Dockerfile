@@ -1,10 +1,11 @@
-
-FROM golang:1.8    #https://hub.docker.com/_/golang/    this docker can be run every go project the same without change anything.
+FROM golang:1.8
 
 WORKDIR /go/src/app
 COPY . .
 
 RUN go-wrapper download   # "go get -d -v ./..."
 RUN go-wrapper install    # "go install -v ./..."
-
-CMD ["go-wrapper", "run"] # ["app"]
+RUN mkdir /temproot          #we need one empty foler 
+COPY ./temp/readme.txt /temproot
+COPY ./temp/.ghs.yml /temproot     #you can define user privilege in .ghs.yml file
+CMD ["go-wrapper", "run","--root=/temproot"] # ["app"]
