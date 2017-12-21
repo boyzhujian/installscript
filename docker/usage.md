@@ -18,5 +18,8 @@ docker run -d -p 19000:9000 -v /root/jiazhu3/dockervolume/portainerdata/:/data p
 ##  manage  cluster supervisord with cesi
 docker run -d -p 5000:5000 -v /root/jiazhu3/etc/cesiconf/:/etc/ burcina/docker-cesi
 
-#install powserdns web ui
+## install powserdns web ui
 https://github.com/interlegis/docker-pdnsadmin/blob/master/docker-compose.yml
+
+## run docker not as root
+sudo usermod -a -G docker $USER
