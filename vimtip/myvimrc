@@ -1,0 +1,11 @@
+set number                         : show line number
+syntax enable
+
+http://vimdoc.sourceforge.net/htmldoc/syntax.html
+
+
+map gg :!go run main.go             :map to  define shotcut
+au FileType go set noexpandtab      :filetype 
+au FileType go set shiftwidth=4
+au FileType go set softtabstop=4
+au FileType go set tabstop=4
