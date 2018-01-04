@@ -9,3 +9,18 @@ au FileType go set noexpandtab      :filetype
 au FileType go set shiftwidth=4
 au FileType go set softtabstop=4
 au FileType go set tabstop=4
+
+
+https://stackoverflow.com/questions/9990219/vim-whats-the-difference-between-let-and-set
+
+#  :set is for setting options, :let for assigning a value to a variable.
+
+It happens that the value for an option is linked to the name of the option prepended by a & (the &option-name construct then behaves very similar to "ordinary" variables). So, the following are equivalent:
+
+:set  tw=40
+:let &tw=40
+But, for example, assigning 50 to the global variable foo (:let g:foo=50) cannot be achieved with a :set command (because g:foo is a variable and not an option).
+
+Some options are boolean like. When setting these, no value is needed (as in :set noic and the opposite :set ic).
+
+
