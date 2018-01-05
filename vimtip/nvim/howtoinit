@@ -2,3 +2,6 @@
 
 mkidr -p ~/.config/nvim/init.vim
 curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=go&langs=html&langs=javascript&editor=nvim' > ~/.config/nvim/init.vim
+
+
+or you can learn config from https://github.com/sebdah/dotfiles/blob/master/config/nvim/init.vim
