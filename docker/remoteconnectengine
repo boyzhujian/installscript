@@ -6,4 +6,4 @@ DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock"
 
 Restart docker daemon
 
-sudo restart docker
+sudo systemctl  restart docker
