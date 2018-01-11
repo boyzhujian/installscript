@@ -30,12 +30,29 @@ is equal
   "tlskey": "/var/docker/serverkey.pem",
   "hosts": ["tcp://192.168.59.3:2376"]
 }
+
+
+
+why so many place file ? 
+
+/etc/docker/daemon.json
+/etc/docker/key.json
+
+/etc/default/docker    
+DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock -g /w11logs/jiazhu3/docker/docker/"
+
+ /etc/sysconfig/docker
+ 
  /bin/dockerd --config-file /etc/default/dockerd.json
  
  
+ 
  centos7 
+ edit  /usr/lib/systemd/system/docker.service   if want to control with systemctl 
  use systemctl manage dockerd add -H tcp://192.168.59.3:2376
+
 /etc/systemd/system/multi-user.target.wants/docker.service
- systemctl daemon-reload
+
+systemctl daemon-reload
 systemctl restart docker
 
