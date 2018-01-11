@@ -1,6 +1,7 @@
 leaderkey  ctrl b,   use + for shot cut 
 
 
+
 tmux     // start server 
 
 tmux ls   //list windows
@@ -11,10 +12,12 @@ tmux a -t windowsnumber
 
 + "    split panel horization
 + %    split  panel vertical 
++ space toggle panel
 +  arrow   move panel
 
 + c  new window
 + windownumber    choose window
+
 
 
 #https://robots.thoughtbot.com/a-tmux-crash-course
