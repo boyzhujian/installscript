@@ -9,6 +9,7 @@ tmux ls   //list windows
 tmux a   
 tmux a -t windowsnumber 
 
+```
 
 + "    split panel horization
 + %    split  panel vertical 
@@ -17,8 +18,9 @@ tmux a -t windowsnumber
 
 + c  new window
 + windownumber    choose window
++,   rename window
 
-
+```
 
 #https://robots.thoughtbot.com/a-tmux-crash-course
 
