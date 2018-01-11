@@ -33,9 +33,9 @@ is equal
 
 
 
-why so many place file ? 
+why so many place file ?  
 
-/etc/docker/daemon.json
+/etc/docker/daemon.json   this file is for dockerdread
 /etc/docker/key.json
 
 /etc/default/docker    
@@ -52,7 +52,11 @@ DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock -g /w11logs/ji
  use systemctl manage dockerd add -H tcp://192.168.59.3:2376
 
 /etc/systemd/system/multi-user.target.wants/docker.service
+/etc/systemd/system/docker.service.d
 
 systemctl daemon-reload
 systemctl restart docker
+
+
+dockerd -H tcp://10.252.10.37 -H unix:///var/run/docker.sock  -g /w11logs/jiazhu3/docker/docker/
 
