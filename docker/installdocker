@@ -57,6 +57,9 @@ DOCKER_OPTS="-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock -g /w11logs/ji
 systemctl daemon-reload
 systemctl restart docker
 
+systemctl enable docker
+systemctl disable docker
+
 
 dockerd -H tcp://10.252.10.37 -H unix:///var/run/docker.sock  -g /w11logs/jiazhu3/docker/docker/
 
