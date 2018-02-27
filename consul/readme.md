@@ -1,3 +1,7 @@
+# dev
+consul agent -dev
+http://127.0.0.1:8500/
+
 
 # command
 ```
