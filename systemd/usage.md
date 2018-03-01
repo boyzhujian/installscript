@@ -19,3 +19,6 @@ example unitfilename w11logs.mount
 
 # demo
 https://github.com/boyzhujian/supervisor-systemd
+
+#example doc
+https://www.gunes.io/2017/08/24/systemd-vs-supervisor
