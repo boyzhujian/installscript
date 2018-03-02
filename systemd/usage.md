@@ -1,3 +1,19 @@
+# basic unit file structure
+[Unit]
+Description="Foo web application"
+PartOf=foo.target
+
+[Service]
+User=root 
+Group=root
+Environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8
+ExecStart=/home/foo/bin/start_foo
+
+[Install]
+
+
+
+# Command
 systemctl  -h 
 
 if systemctl status   show degraded  
@@ -8,8 +24,9 @@ example unitfilename w11logs.mount
  journalctl -xeu unitfilename
  
  
- # file location
+ # key  file location
  /etc/systemd/system/ 
+ /usr/lib/systemd/system/
  
  unit_name.type_extension
 
