@@ -9,7 +9,11 @@ sysctl -w fs.file-max=65536
 
 #install dockernized elk
 docker pull sebp/elk
-docker run -p 5601:5601 -p 9200:9200 -p 5044:5044   -v dockerelkdata:/var/lib/elasticsearch --name elk sebp/elk
+
+
+
+ docker run -p 5601:5601 -p 9200:9200 -p 5044:5044   -v /opt/dockerdata/elkdata:/var/lib/elasticsearch  --privileged  --ulimit nofile=262144:262144  --name elk sebp/elk
+
 
 #install filebeat on client
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.5.2-x86_64.rpm
