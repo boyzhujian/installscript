@@ -12,6 +12,11 @@ vgcreate
 
 
 
+pvcreate
+vgcreate
+lvcreate
+lvconvert
+
 On Debian using lvm2
 
 Install lvm2 using sudo apt-get install lvm2 and start it using /etc/init.d/lvm2 start
