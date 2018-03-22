@@ -35,3 +35,6 @@ change fstab if you want to map this vg to some filesystem
 
 /dev/mapper/vg /var/lib/folder ext4 rw,user 
 mount the volume using mount -a
+
+
+https://github.com/LINBIT/docker/blob/master/docs/userguide/storagedriver/device-mapper-driver.md
