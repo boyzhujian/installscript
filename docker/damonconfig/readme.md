@@ -12,3 +12,7 @@ ExecStart=/usr/bin/dockerd $OPTIONS
 And create a file /etc/sysconfig/docker with content:
 
 OPTIONS="-s overlay --storage-opt dm.no_warn_on_loop_devices=true"
+
+
+# Doc 
+https://github.com/LINBIT/docker/blob/master/docs/userguide/storagedriver/device-mapper-driver.md
