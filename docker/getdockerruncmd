@@ -1,0 +1,4 @@
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock    assaflavie/runlike   containerid
+
+
+https://github.com/lavie/runlike
