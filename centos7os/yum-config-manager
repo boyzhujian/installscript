@@ -1,0 +1,1 @@
+ yum-config-manager   --add-repo=ADDREPO
