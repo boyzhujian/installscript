@@ -1,0 +1,16 @@
+
+
+    [Unit]  
+    Description=tomcatapi  
+    After=network.target  
+       
+    [Service]  
+    Type=forking  
+    PIDFile=/usr/local/tomcat/tomcat.pid  
+    ExecStart=/usr/local/tomcat/bin/startup.sh  
+    ExecReload=  
+    ExecStop=/usr/local/tomcat/bin/shutdown.sh  
+    PrivateTmp=true  
+       
+    [Install]  
+    WantedBy=multi-user.target  
