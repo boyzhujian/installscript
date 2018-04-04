@@ -1,1 +1,8 @@
  yum-config-manager   --add-repo=ADDREPO
+ 
+ 
+ baseurl = http://linuxdownload.adobe.com/linux/x86_64/
+baseurl = http://mirrors.aliyun.com/centos/7/os/x86_64/, http://mirrors.aliyuncs.com/centos/7/os/x86_64/
+baseurl = https://packages.microsoft.com/yumrepos/vscode
+baseurl = https://download.docker.com/linux/centos/7/x86_64/stable
+baseurl = http://mirrors.aliyun.com/centos/7/updates/x86_64/,http://mirrors.aliyuncs.com/centos/7/updates/x86_64/
