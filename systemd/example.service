@@ -1,0 +1,12 @@
+[Unit]
+Description=CyberManagement Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/dir/
+ExecStart=/opt/dir/cyberbotbackend_linux
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
