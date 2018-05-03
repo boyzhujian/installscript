@@ -1,0 +1,18 @@
+{
+    "CN": "Your Certificate Authority",
+    "hosts": [
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 4096
+    },
+    "names": [
+        {
+            "C": "US",
+            "ST": "Your State",
+            "L": "Your City",
+            "O": "Your Organization",
+            "OU": "Your Certificate Authority"
+        }
+    ]
+}
