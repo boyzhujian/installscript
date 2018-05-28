@@ -6,3 +6,5 @@ cd coreos-vagrant
 vagrant up
 vagrant ssh
 ```
+
+### https://github.com/jolson88/CoreOS-GettingStarted
