@@ -13,4 +13,8 @@ curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/bu
 mkdir -p /etc/systemd/system/kubelet.service.d
 curl -sSL "https://raw.githubusercontent.com/kubernetes/kubernetes/${RELEASE}/build/debs/10-kubeadm.conf" | sed "s:/usr/bin:/opt/bin:g" > /etc/systemd/system/kubelet.service.d/10-kubeadm.conf
 systemctl enable kubelet && systemctl start kubelet
+systemctl daemon-reload
+systemctl restart kubelet
+
+kubeadm  init --apiserver-advertise-address  172.17.8.101
 
