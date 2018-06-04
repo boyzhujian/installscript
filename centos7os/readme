@@ -1,1 +1,12 @@
 Some centos7  tips
+
+#generate kickstart file 
+yum install system-config-kickstart
+/bin/system-config-kickstart
+
+
+virt-install  --name=test  --vcpus=1 --ram=1G --disk-path=/mnt/sumsumbsdf/virshimg/test.qcow2,size=20G,format=qcow2 \
+--check-cpu  --accelerate  --nographics  --os-type linux  --location= 
+--initrd-inject=
+--extract-args=
+
