@@ -11,3 +11,9 @@ virt-install
 --disk path=/mnt/disk2/virshimg/mycentos7min,format=qcow2         --check-cpu   --accelerate   
 --graphics  vnc    --os-type linux   --cdrom /mnt/disk2/iso/CentOS-7-x86_64-Minimal-1804.iso
 
+
+
+[https://linux.die.net/man/1/virt-install](https://linux.die.net/man/1/virt-install)
+[virtinstall scritp ](https://github.com/johnbarneta/virt-install-scripts/blob/master/virt-install-centos)
+
+
