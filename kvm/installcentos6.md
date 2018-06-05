@@ -25,10 +25,13 @@
  
        virt-install \
       --name test \
-      --ram 2048 \
-      --os-variant rhel6 \
+      --vcpus=1 \
+      --check-cpu \
+      --accelerate \
+      --ram 1024 \
+      --os-variant rhel7 \
       --disk path=/mnt/disk2/virshimg/mycentos7two,size=40 \
       --network bridge=virbr0 \
-      --location http://ftp.funet.fi/pub/mirrors/centos.org/6/os/x86_64/ \
+      --location http://mirror.airenetworks.es/CentOS/7/os/x86_64/ \
       --initrd-inject=/root/ks.cfg \
-      --extra-args "ks=file:/ks.cfg console=ttyS0"
+      --extra-args "ks=file:/ks.cfg  console=ttyS0"
