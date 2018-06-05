@@ -10,8 +10,19 @@ virt-install    \
 --name=mycentos7min   --vcpus=1   --ram 1024        \ 
 --disk path=/mnt/disk2/virshimg/mycentos7min,format=qcow2         --check-cpu   --accelerate   \
 --graphics  vnc    --os-type linux   --cdrom /mnt/disk2/iso/CentOS-7-x86_64-Minimal-1804.iso \
---initrd-inject=/path/to/my.ks --extra-args "ks=file:/my.ks"
 
+
+
+
+
+virt-install --name=centos \
+--memory=1024 --vcpus=2 \
+--location=/mnt/disk2/iso/CentOS-7-x86_64-Minimal-1804.iso \
+--disk /var/lib/libvirt/images/centos7.qcow2,device=disk,bus=virtio,size=8 \
+--os-type=linux  \
+--nographics \
+--extra-args='console=tty0 console=ttyS0,115200n8 serial'
+--network bridge:br0 \
 
 
 [https://linux.die.net/man/1/virt-install](https://linux.die.net/man/1/virt-install)
