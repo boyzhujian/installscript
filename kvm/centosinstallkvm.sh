@@ -34,9 +34,9 @@ virt-install \
   --accelerate \
   --nographics \
   --os-type linux \
-  --location=/mnt/disk2/tmp  \
-	--initrd-inject=/mnt/disk2/iso/mycentos7.ks \
---extra-args="ks=file://mnt/disk2/iso/mycentos7.ks"
+  --location=http://localhost:2015 \
+--initrd-inject=/mnt/disk2/iso/mycentos7.ks \
+--extra-args="ks=http://localhost:2016/mycentos7.ks  console=tty0 console=ttyS0,115200n8 serial"
 
 
 [https://linux.die.net/man/1/virt-install](https://linux.die.net/man/1/virt-install)
