@@ -21,7 +21,7 @@
     @base
     %end
 
-## How to use
+## How to use  notwork
  
        virt-install \
       --name test \
@@ -34,4 +34,4 @@
       --network bridge=virbr0 \
       --location http://mirror.airenetworks.es/CentOS/7/os/x86_64/ \
       --initrd-inject=/root/ks.cfg \
-      --extra-args "ks=file:/ks.cfg  console=ttyS0"
+      --extra-args "ks=file:/ks.cfg  console=tty0 console=ttyS0,115200"
