@@ -23,13 +23,12 @@
 
 ## How to use
  
-     virt-install \
+       virt-install \
       --name test \
       --ram 2048 \
       --os-variant rhel6 \
-      --disk path=/srv/libvirt/images2/test.img,size=40 \
-      --network bridge=br0 \
-      --network bridge=br1 \
+      --disk path=/mnt/disk2/virshimg/mycentos7two,size=40 \
+      --network bridge=virbr0 \
       --location http://ftp.funet.fi/pub/mirrors/centos.org/6/os/x86_64/ \
       --initrd-inject=/root/ks.cfg \
       --extra-args "ks=file:/ks.cfg console=ttyS0"
