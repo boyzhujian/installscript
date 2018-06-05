@@ -24,6 +24,20 @@ virt-install --name=centos \
 --extra-args='console=tty0 console=ttyS0,115200n8 serial'
 --network bridge:br0 \
 
+ks file install
+virt-install \
+  --name=centos \
+  --vcpus=1\
+  --ram 1024 \
+	--disk path=/mnt/disk2/virshimg/mycentos7two,format=qcow2 \
+	--check-cpu \
+  --accelerate \
+  --nographics \
+  --os-type linux \
+  --location=/mnt/disk2/tmp  \
+	--initrd-inject=/mnt/disk2/iso/mycentos7.ks \
+--extra-args="ks=file://mnt/disk2/iso/mycentos7.ks"
+
 
 [https://linux.die.net/man/1/virt-install](https://linux.die.net/man/1/virt-install)
 [virtinstall scritp ](https://github.com/johnbarneta/virt-install-scripts/blob/master/virt-install-centos)
