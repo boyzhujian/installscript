@@ -5,7 +5,7 @@ systemctl enable libvirtd
 
 qemu-img create -f qcow2 mycentos7min 20G
 
-
+graphic install
 virt-install    \
 --name=mycentos7min   --vcpus=1   --ram 1024        \ 
 --disk path=/mnt/disk2/virshimg/mycentos7min,format=qcow2         --check-cpu   --accelerate   \
@@ -13,7 +13,7 @@ virt-install    \
 
 
 
-
+text install
 
 virt-install --name=centos \
 --memory=1024 --vcpus=2 \
