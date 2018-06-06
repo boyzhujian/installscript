@@ -15,8 +15,9 @@ http://mitm.it/
 
 
 mitmproxy termail command
-w  to save      ; use mitmproxy -r file to load
-F to follow Flow
-q   exit
+- w  to save      ; use mitmproxy -r file to load
+- F to follow Flow
+- q   exit
+- space goto next package
 
 
