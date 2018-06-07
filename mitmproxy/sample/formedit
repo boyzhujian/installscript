@@ -1,0 +1,25 @@
+#coding=utf-8
+import json
+import requests
+
+accountId = ""
+pwd = ""
+
+def getSessionId(session,accountId,pwd):
+    url = "https://hygtest.ms.netease.com/winyyg/scripts"
+    data = {
+        "username":accountId,
+        "password":pwd,
+        "tag":"winyylg_login"
+    }
+    r = json.loads(session.post(url,data).text)
+    return r[0][1]
+
+def request(context,flow):
+    if "new_product_detail" in flow.request.url:
+        form_urlencoded = flow.request.get_form_urlencoded()
+        form_urlencoded["accountId"] = [accountId]
+        s = requests.Session()
+        sessionId = getSessionId(s,accountId,pwd)
+        form_urlencoded["sessionId"] = [sessionId]
+        flow.request.set_form_urlencoded(form_urlencoded)
