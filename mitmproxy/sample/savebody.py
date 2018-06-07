@@ -10,3 +10,6 @@ def response(flow):
 
         # Add other separators etc. however you want
         ofile.write(b"-------")
+
+        
+#useage mitmdump -s savebody.py
