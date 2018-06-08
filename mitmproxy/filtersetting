@@ -1,0 +1,52 @@
+Filter expressions
+
+mitmproxy和mitmdump中的许多命令都采用过滤器表达式。过滤器表达式由以下运算符组成：
+Expression 	Description
+~a 	Match asset in response: CSS, Javascript, Flash, images.
+~b regex 	Body
+~bq regex 	Request body
+~bs regex 	Response body
+~c int 	HTTP response code
+~d regex 	Domain
+~dst regex 	Match destination address
+~e 	Match error
+~h regex 	Header
+~hq regex 	Request header
+~hs regex 	Response header
+~http 	Match HTTP flows
+~m regex 	Method
+~marked 	Match marked flows
+~q 	Match request with no response
+~s 	Match response
+~src regex 	Match source address
+~t regex 	Content-type header
+~tcp 	Match TCP flows
+~tq regex 	Request Content-Type header
+~ts regex 	Response Content-Type header
+~u regex 	URL
+~websocket 	Match WebSocket flows
+! 	unary not
+& 	and
+| 	or
+(...) 	grouping
+
+    正则表达式是Python风格的
+    正则表达式可以指定为引用的字符串
+    标题匹配（〜h，〜hq，〜hs）与“name：value”形式的字符串相反。
+    没有运算符的字符串与请求URL匹配。
+    默认的二进制运算符为＆。
+
+Examples
+
+URL 包含“google.com”:
+
+google\.com
+
+请求的body包含“test”:
+
+~q ~b test
+
+Anything but requests with a text/html content type:
+
+!(~q & ~t "text/html")
+
