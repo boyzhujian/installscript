@@ -7,3 +7,11 @@ virsh --connect qemu:///system  or  virsh -c qemu:///session
 start my_vm
 console my_vm
 
+for centos 7
+in vm
+[root@localhost ~]# grubby --update-kernel=ALL --args="console=ttyS0"
+then
+
+[root@localhost ~]# reboot
+
+#https://www.cnblogs.com/xieshengsen/p/6215168.html
