@@ -1,3 +1,11 @@
+yum install nfs-utils
+
+data/nfs_share 192.168.4.212(rw,sync,no_root_squash)
+/data/nfs_share *(ro)
+
+这一行表示只有192.168.4.212客户端能够以读写权限挂载共享目录，其他客户端只能以只读权限挂载。
+
+
 Nfs config is easy but need human todo 
 There is three way to config
 
