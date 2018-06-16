@@ -1,0 +1,5 @@
+
+
+windows server change smb version to 2.0
+so for win10 or later server ,use
+ mount -t cifs -o username="tset",password="pass",vers=2.0    //ip/dir  /mountpath
