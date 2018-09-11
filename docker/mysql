@@ -14,3 +14,8 @@ $ docker run --name damon-mariadb
 #https://github.com/phpmyadmin/docker
 docker run --name myadmin -d -e PMA_HOST=10.255.73.132 -p 8090:80    phpmyadmin/phpmyadmin
 docker run --name myadmin -d --link damon-mariadb -p 8090:80    PMA_HOST=10.254.x.x  phpmyadmin/phpmyadmin
+
+
+#dump docker data
+docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > /some/path/on/your/host/all-databases.sql
+
