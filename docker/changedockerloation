@@ -1,0 +1,9 @@
+systemctl stop docker
+
+vi /etc/docker/daemon.json
+
+{
+  "graph":"/mnt/cryptfs/docker"
+}
+
+systemctl start docker
