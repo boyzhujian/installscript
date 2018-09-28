@@ -1,4 +1,7 @@
+** portainer **
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/dockerdata/portainer:/data portainer/portainer
+
+** ELK  **
 docker run -p 5601:5601 -p 9200:9200 -p 5044:5044   -v /opt/dockerdata/elkdata:/var/lib/elasticsearch  --privileged  --ulimit nofile=262144:262144  --name elk sebp/elk`
 
  
@@ -8,4 +11,6 @@ docker run --name=mymongo --hostname=mymongo --env="PATH=/usr/local/sbin:/usr/lo
 
 
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock    assaflavie/runlike   1869cc7eb424
+
+dockerrun --name dnsmasq --cap-add=NET_ADMIN --net=host -v /opt/dockerdata/dnsmasqdata:/etc/dnsmasq storytel/dnsmasq
 ~
