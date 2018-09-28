@@ -1,7 +1,7 @@
-** portainer **
+## portainer ##
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/dockerdata/portainer:/data portainer/portainer
 
-** ELK  **
+## ELK  ##
 docker run -p 5601:5601 -p 9200:9200 -p 5044:5044   -v /opt/dockerdata/elkdata:/var/lib/elasticsearch  --privileged  --ulimit nofile=262144:262144  --name elk sebp/elk`
 
  
