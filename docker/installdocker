@@ -1,3 +1,5 @@
+#https://github.com/rancher/install-docker
+
 #http://www.jianshu.com/p/098b7eef11e5
 
  yum install -y yum-utils
