@@ -1,0 +1,7 @@
+users:
+  - name: core
+    ssh-authorized-keys:
+     -ssh-rsa: AAAAB3NzaC1yc2EAAAADAQABAAABAQDgUact8jXYZqGY4zq+6hnr4FDwYrag8763lQU96m3Dvi8OMHsDcXNb4HDeb+IYqVKeNB8vQ1siz3HGZsglnLtGzjrt+mk+sVaCMH2DFo81HOjZG3VOV1azI3rQkq0+Y/DEHhlIdS/IK03/riRSQ0xF+JDGBPJG0KgS7TilHu3DJZVo/Cw9SVtv2/IhT9ZG1vZffoT0pUJ8CnfNpJ5Q75VlVeLVwQDb97d4ajJOcx/j/c3t2KD+dc00u0yPbs8/O9Lrn/myQNIqRQq0nP9LSFSG1zeDoMha6yqXrcZFzvRMaXXQCaXTNpYoAIwj4xXfFpUS5GB4fEtZyZZg8TftnMUD
+   - groups:
+       - sudo
+       - docker
