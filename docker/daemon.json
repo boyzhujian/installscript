@@ -1,3 +1,4 @@
 {
-  "registry-mirrors": ["https://y4s2iuk7.mirror.aliyuncs.com"]
+  "registry-mirrors": ["https://y4s2iuk7.mirror.aliyuncs.com"],
+   "insecure-registries':["127.0.0.1:5000"]
 }
