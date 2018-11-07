@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  gohttp:
+    image: codeskyblue/gohttpserver
+    volumes:
+      - /opt/dockerdata/gohttp:/app/public # persistent oracle database data.
+    ports:
+      - 8000:8000
+    entrypoint: ["/app/gohttpserver","--root=/app/public","--upload"]
