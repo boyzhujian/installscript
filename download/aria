@@ -1,0 +1,8 @@
+apt  install aria2c
+
+
+aria2c [<OPTIONS>] [<URI>|<MAGNET>|<TORRENT_FILE>|<METALINK_FILE>] 
+
+ git clone https://github.com/ziahamza/webui-aria2
+ aria2c --enable-rpc --rpc-listen-all
+  node node-server.js
