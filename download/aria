@@ -2,6 +2,8 @@ apt  install aria2c
 
 
 aria2c [<OPTIONS>] [<URI>|<MAGNET>|<TORRENT_FILE>|<METALINK_FILE>] 
+aria2c --max-connection-per-server=4 --min-split-size=1M
+
 
  git clone https://github.com/ziahamza/webui-aria2
  aria2c --enable-rpc --rpc-listen-all
