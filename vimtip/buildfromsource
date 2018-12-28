@@ -1,0 +1,30 @@
+
+git clone https://github.com/vim/vim.git
+cd vim/src
+make
+make install
+
+sudo yum install ncurses-devel.x86_64
+
+
+#install pathoen
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+~/.vimrc
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+
+#install vim go
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+
+
+# install vim go
+GoInstallBinaries
+
+
+#show vim load plugins
+
+:set runtimepath?
