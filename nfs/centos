@@ -1,0 +1,6 @@
+yum  install nfs
+systemctl restart nfs
+
+
+vi /etc/exports
+exports -rv
