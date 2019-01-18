@@ -45,3 +45,6 @@ journalctl -f
 
 # Show logs for specific service
 journalctl -u my_daemon.service
+
+
+systemctl list-units --state=failed
