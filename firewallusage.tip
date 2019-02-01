@@ -1,0 +1,25 @@
+yum install firewalld
+systemctl enable firewalld
+firewall-cmd --state
+firewall-cmd --get-default-zone
+firewall-cmd --get-active-zones
+firewall-cmd --list-all
+firewall-cmd --get-zones
+firewall-cmd --zone=home --list-all
+firewall-cmd --list-all-zones
+firewall-cmd --zone=home --change-interface=eth0
+firewall-cmd --get-services
+firewall-cmd --set-default-zone=home
+firewall-cmd --get-services
+firewall-cmd --zone=public --add-service=http
+firewall-cmd --zone=public --list-services
+firewall-cmd --zone=public --permanent --add-service=http
+firewall-cmd --zone=public --permanent --list-services
+firewall-cmd --zone=public --add-service=https
+firewall-cmd --zone=public --permanent --add-service=https
+firewall-cmd --zone=public --add-port=5000/tcp
+firewall-cmd --zone=public --list-ports
+firewall-cmd --zone=public --add-port=4990-4999/udp
+firewall-cmd --zone=public --permanent --add-port=5000/tcp
+firewall-cmd --zone=public --permanent --add-port=4990-4999/udp
+firewall-cmd --zone=public --permanent --list-portsv
