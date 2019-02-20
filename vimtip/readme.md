@@ -5,6 +5,8 @@
 - set ruler = :set ruler
 - set number
 - set hlsearch      Highlight all search pattern matches
+- check option *set  number? *
+- help file on option     *h number*
 
 [what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping](https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping)
 remap is an option that makes mappings work recursively. By default it is on and I'd recommend you leave it that way. The rest are mapping commands, described below:
