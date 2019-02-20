@@ -5,7 +5,7 @@
 - set ruler = :set ruler
 - set number
 - set hlsearch      Highlight all search pattern matches
-- check option *set  number? *
+- check option *set  number?*
 - help file on option     *h number*
 
 [what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping](https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping)
