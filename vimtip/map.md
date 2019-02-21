@@ -1,7 +1,13 @@
 -  :help map-which-keys  find unused keys  
 - :map
 - :map!
--  :verbose map <key>
+-  :verbose map <key>    show map key info
+-  unmap   <key>
+-  you can use assgin map(  vmap nmap imap  cmap )  in different mod,see help map-modes     
+  
+  
+
+
 
 
 [what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping](https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping)
