@@ -50,6 +50,13 @@ options
 [what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping](https://stackoverflow.com/questions/3776117/what-is-the-difference-between-the-remap-noremap-nnoremap-and-vnoremap-mapping)
 remap is an option that makes mappings work recursively. By default it is on and I'd recommend you leave it that way. The rest are mapping commands, described below:
 
+```
+:help :map
+:help :noremap
+:help recursive_mapping
+:help :map-modes
+```
+
 :map and :noremap are recursive and non-recursive versions of the various mapping commands. What that means is that if you do:
 
 :map j gg
