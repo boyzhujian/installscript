@@ -62,3 +62,27 @@ ution, vnoremap and vmap work in Visual AND Select mode. To have a mapping only 
 <bar>          the '|' character, which otherwise needs to be escaped '\|'
 ```
 
+
+
+
+leader  key
+```
+:help leader
+
+To define a mapping which uses the "mapleader" variable, the special string
+"<Leader>" can be used.  It is replaced with the string value of "mapleader".
+If "mapleader" is not set or empty, a backslash is used instead.  
+Example:
+    :map <Leader>A  oanother line <Esc>
+Works like:
+    :map \A  oanother line <Esc>
+But after:
+    :let mapleader = ","
+It works like:
+    :map ,A  oanother line <Esc>
+
+Note that the value of "mapleader" is used at the moment the mapping is
+defined.  Changing "mapleader" after that has no effect for already defined
+mappings.
+
+```
