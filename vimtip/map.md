@@ -52,6 +52,7 @@ ution, vnoremap and vmap work in Visual AND Select mode. To have a mapping only 
 <End>          End
 <PageUp>       Page-Up
 <PageDown>     Page-Down
+<C-X>         Ctrl-X
 <bar>          the '|' character, which otherwise needs to be escaped '\|'
 ```
 
