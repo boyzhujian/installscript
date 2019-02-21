@@ -21,7 +21,15 @@ map KEY KEYSTROKES
 :help :map-modes
 ```
 
+```
+imap ,9 <c-r>=1+1<cr>
+imap <expr> ,9 1+1
+```
+Both of these do the same thing as far as I can tell: they insert 2 if you type ,9 in insert mode.
+
 :map and :noremap are recursive and non-recursive versions of the various mapping commands. What that means is that if you do:
+
+
 
 :map j gg
 :map Q j
