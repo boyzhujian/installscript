@@ -14,4 +14,7 @@
 ```
 GATEWAY=<new_default_gateway_ip>
 
+or  with muliple device
+GATEWAYDEV=<network_interface>
+
 ```
