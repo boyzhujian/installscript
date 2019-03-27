@@ -1,3 +1,7 @@
+ ## install pyenv
+ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+
+
 
 #pip command help
 https://packaging.python.org/installing/#installing-from-pypi
