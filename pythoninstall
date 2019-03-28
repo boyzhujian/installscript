@@ -1,5 +1,10 @@
  ## install pyenv
  curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+ sudo yum install libffi-devel
+ sudo yum install zlib-devel
+ pyenv install 3.7.3
+ 
+ 
 
 
 
