@@ -1,11 +1,11 @@
  ## install pyenv
  curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
- sudo yum install libffi-devel
- sudo yum install zlib-devel
+ sudo yum install zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel \
+openssl-devel xz xz-devel libffi-devel findutils
  pyenv install 3.7.3
  
  
-
+### pip install bpython
 
 
 #pip command help
