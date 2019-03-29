@@ -4,7 +4,7 @@
  ssh-keygen -t rsa -b4096
  
  #copy sshid 
- ssh-copy-id root@139.162.35.39
+ ssh-copy-id  -i key.pub  root@139.162.35.39
  
  
 ClientAliveInterval 120
