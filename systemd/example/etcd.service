@@ -1,0 +1,22 @@
+[Unit]
+Description=singleetcd
+Documentation=https://github.com/etcd-io/etcd
+After=network.target
+
+[Service]
+User=root
+Type=notify
+Environment=ETCD_DATA_DIR=/var/lib/etcd
+ExecStart=/usr/local/bin/etcd --name cron1 --initial-advertise-peer-urls http://10.240.213.105:2380 \
+  --listen-peer-urls http://10.240.213.105:2380 \
+  --listen-client-urls http://10.240.213.105:2379,http://127.0.0.1:2379 \
+  --advertise-client-urls http://10.240.213.105:2379 \
+  --initial-cluster-token etcd-cluster-for-cronsun \
+  --initial-cluster cron1=http://10.240.213.105:2380,cron2=http://10.240.212.31:2380,cron3=http://10.240.213.243:2380 \
+  --initial-cluster-state new
+Restart=always
+RestartSec=10s
+LimitNOFILE=40000
+
+[Install]
+WantedBy=multi-user.target
