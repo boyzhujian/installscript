@@ -3,7 +3,7 @@ Description=CyberManagement Service
 After=network.target
 
 [Service]
-Type=simple
+Type=simple    #can be simple,notify
 WorkingDirectory=/opt/dir/
 ExecStart=/opt/dir/cyberbotbackend_linux
 Restart=on-abort
