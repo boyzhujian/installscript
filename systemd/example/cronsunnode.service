@@ -1,0 +1,8 @@
+[Unit]
+Description=Run cronsunnode
+
+[Service]
+Type=simple
+WorkingDirectory=/root/cronsun/cronsun-v0.3.5
+ExecStart=/root/cronsun/cronsun-v0.3.5/cronnode  -conf ./conf/base.json
+Restart=on-abort
