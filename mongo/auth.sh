@@ -26,3 +26,4 @@ db.createUser(
     authorization: "disabled"
  
  
+mongo 10.240.213.105/dbname  -u username -p pass --authenticationDatabase dbname
