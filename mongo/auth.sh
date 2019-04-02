@@ -8,6 +8,21 @@ db.createUser(
   }
 )
 
+
+db.createUser(
+  {
+    user: "cronsunadmin",
+    pwd: "pass",
+    roles: [ { role: "readWrite", db: "cronsun" } ],
+    mechanisms:[ "SCRAM-SHA-1"]
+  }
+)
+
+
  db.auth("superadmin", "thepianohasbeendrinking")
+ 
+ 
+ security:
+    authorization: "disabled"
  
  
