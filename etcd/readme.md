@@ -8,3 +8,8 @@
 
 
 ## use etcd grpcproxy to  combine watch  and  reduce etcd load.
+
+
+
+## Doc
+https://segmentfault.com/a/1190000016010980(https://segmentfault.com/a/1190000016010980)
