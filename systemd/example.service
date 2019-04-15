@@ -7,6 +7,8 @@ Type=simple    #simple, exec, forking, oneshot, dbus, notify or idle
 WorkingDirectory=/opt/dir/
 ExecStart=/opt/dir/cyberbotbackend_linux
 Restart=on-abort   #no    always    on-success    on-failure    on-abnormal    on-abort    on-watchdog
+User=root
+
 
 [Install]
 WantedBy=multi-user.target
