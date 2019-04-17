@@ -17,26 +17,33 @@
 
 
 ### type assertions
+```
 let someValue: any = "this is a string";
 let strLength: number = (someValue as string).length;
+```
 
-###
+###  interface  
+```
 interface User {
   readonly name: string,
   age?: number
 }
 function printLabel(options: User) { ... }
+```
 
 ### dynamic keys
+```
 {
   [key: string]: Object[]
 }
+```
 
 ### type alias
 type Name = string | string[]
 
 
 ### classes
+```
 class Point {
   x: number
   y: number
@@ -46,8 +53,6 @@ class Point {
     this.y = y
   }
 }
-
-
 Public (default)
 public firstName: string;
 Protected
@@ -59,30 +64,26 @@ readonly pi: number = 3.14159;
 Static
 static log(msg: string) { consol­e.l­og(msg) };
 
-
-
 class Point {...}
-
 class Point3D extends Point {...}
-
 interface Colored {...}
-
 class Pixel extends Point implements Colored {...}
-
-
 abstract class Person {
   name: string;
   monthlySalary: number;
   monthlyBenefits: number;
-
   abstract calcSalary(): number;
 }
-
+```
 
 ####optional parametes
+?
+
 #### rest parameters
+...
 
 ###  namespaces
+```
 namespace AcmeCorp.Logging {
   export class Logger {
        static log(msg: string) : void {
@@ -90,12 +91,7 @@ namespace AcmeCorp.Logging {
       };
   }
 }
-
-/// <reference path="AcmeCorp.Logging.ts" />
-
-//Alias
 import logger = AcmeCorp.Logging.Logger;
-
 namespace AcmeCorp.OnlineStore {
   class OrderLogic {
     calcOrder(): number {
@@ -104,23 +100,24 @@ namespace AcmeCorp.OnlineStore {
     }
   }
 }
-
+```
 
 ###  generics
+```
 class Greeter<T> {
   greeting: T
   constructor(message: T) {
     this.greeting = message
   }
 }
-
 let greeter = new Greeter<string>('Hello, world')
-
+```
 
 ### modules
 export interface User { ... }
 
 ### type extraction
+```
 interface Building {
   room: {
     door: string,
@@ -129,4 +126,4 @@ interface Building {
 }
 
 type Walls = Building['room']['walls']; // string[]
-
+```
