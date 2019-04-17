@@ -76,7 +76,7 @@ abstract class Person {
 }
 ```
 
-####optional parametes
+#### optional parametes
 ?
 
 #### rest parameters
