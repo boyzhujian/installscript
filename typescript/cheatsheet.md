@@ -6,13 +6,13 @@
 - string 
 - null
 - undefined
--array  string[]   or  Array<number>
--tuple  [string, number]     let x: [string, number]; Initialize it x = ["hello", 10]
--union  string | null | undefined   /* union */
--enum  enum Color {Red, Green, Blue = 4}    let c: Color = Color.Green
--never 
+- array  string[]   or  Array<number>
+- tuple  [string, number]     let x: [string, number]; Initialize it x = ["hello", 10]
+- union  string | null | undefined   /* union */
+- enum  enum Color {Red, Green, Blue = 4}    let c: Color = Color.Green
+- never 
 - object
--date  let orderDate: Date = new Date(2017, 2, 9);
+- date  let orderDate: Date = new Date(2017, 2, 9);
 
 
 
