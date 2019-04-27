@@ -1,0 +1,17 @@
+[Unit]
+Description=Etcd Server
+After=network.target
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+WorkingDirectory=/var/lib/etcd/
+EnvironmentFile=-/etc/etcd/etcd.conf
+User=root
+ExecStart=/bin/bash -c '/usr/local/bin/etcd --name=damonetcd --data-dir=/var/lib/etcd --listen-client-urls=http://192.168.3.120:2379  --advertise-client-urls=http://192.168.3.120:2380'
+Restart=on-failure
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
