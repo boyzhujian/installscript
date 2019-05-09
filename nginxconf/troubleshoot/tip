@@ -1,0 +1,30 @@
+[https://serverfault.com/questions/433024/how-can-i-debug-nginx-further-than-the-error-log](https://serverfault.com/questions/433024/how-can-i-debug-nginx-further-than-the-error-log)
+
+
+Set debug log level: /etc/nginx/nginx.conf:
+
+...
+http {
+        ...
+        error_log /var/log/nginx/error.log debug; # todo testing remove me not for production use
+        ...
+}
+Setup tcpdump in another window:
+
+tcpdump not port 22 -vvv -s0 -q -XXX
+Monitor log files in yet another window:
+
+tail -f /var/log/nginx/*
+Startup nginx interactively with strace:
+
+# top of /etc/nginx/nginx.conf:
+
+daemon off; # todo testing remove me not for production use
+And then
+
+ $ strace nginx 
+Further debugging can be had with an nginx compiled with --with-debug. Check it by running:
+
+    nginx -V 2>&1 | grep -- '--with-debug' # no output if not debug
+Another good module not compiled by default is: HttpStubStatusModule. In all likelihood, any decent setup will require a custom-compiled nginx (highly-recommend packaging using distro's packaging tools).
+
