@@ -1,3 +1,5 @@
+#  one $ mean one make var; $$ mean shell var;@
+#https://www.gnu.org/software/make/manual/make.html
 
 gitsync:
 	$(shell ./gitsync.sh)
