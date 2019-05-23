@@ -21,3 +21,23 @@ deploy: build
 remotebuild:
 	#rsync -C -r * ocpcyber2:~/msologic/
 	ssh -t ocpcyber2 "cd /home/jiazhu3/msologic/ &&  /usr/bin/make  -f /home/jiazhu3/msologic/makefile build"
+	
+testenv:
+	if [ "$(BUILD)" = "debug" ]; then  echo "build debug"; else echo "build release"; fi
+	echo "done"
+
+testline:
+	@CC=arm-linux-gcc; \
+	echo $(CC)
+
+CC=arm-linux-gcc
+testglobalvar:
+	@echo $(CC)
+
+
+SUBDIR=src example
+testshellvar:
+	@for subdir in $(SUBDIR); \
+	do\
+		echo "building " $$subdir; \
+	done
