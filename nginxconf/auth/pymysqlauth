@@ -1,0 +1,27 @@
+python db auth with nginx auth 
+[https://github.com/wosc/nginx-db-auth](https://github.com/wosc/nginx-db-auth)
+
+
+```
+location /private/ {
+    auth_request /auth;
+    # ... define rest of location ...
+}
+
+location = /auth {
+    proxy_pass http://localhost:8899;  # or http://mycgi/nginx-auth
+    proxy_pass_request_body off;
+    proxy_set_header Content-Length "";
+    proxy_set_header X-Required-Role "superuser";
+    proxy_set_header WWW-Authenticate "Basic realm=\"my realm\"";
+}
+
+
+[default]
+dsn = postgresql://localhost/myusers
+query = SELECT password FROM users WHERE username = :username AND password = :password AND role = :x_required_role
+password_hash = bcrypt
+
+```
+
+
