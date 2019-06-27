@@ -1,5 +1,10 @@
 Some baisc tip of git command
 
+[https://learngitbranching.js.org/](https://learngitbranching.js.org/)
+[https://try.github.io/](https://try.github.io/)
+
+git help everyday
+
 [https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 
 git checkout
