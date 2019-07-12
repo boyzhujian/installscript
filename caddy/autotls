@@ -1,3 +1,14 @@
+public domain
+
 https://www.2500shouhui.com {
 proxy / http://127.0.0.1:8001
+}
+
+
+
+internal domain
+kibana.webex.com:2020 {
+  bind {$ADDRESS}
+  proxy / http://127.0.0.1:7601
+  tls self_signed
 }
