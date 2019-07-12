@@ -12,3 +12,13 @@ kibana.webex.com:2020 {
   proxy / http://127.0.0.1:7601
   tls self_signed
 }
+
+
+internal domain with http basic auth
+kibana.webex.com:443 {
+  bind {$ADDRESS}
+  proxy / http://127.0.0.1:7601
+  tls self_signed
+basicauth /  jiazhu3 pass
+}
+
