@@ -1,0 +1,9 @@
+https://blog.windrunner.me/tool/ffmpeg.html
+
+###  convert flac to mp3
+  find . -name "*.flac" -exec bash -c 'ffmpeg -i "{}" -y "${0/.flac}.wav"' {} \;
+  
+  
+###  extract mp4 frame to png
+ffmpeg -i your-video.mp4 -ss 00:00:00 -vframes 1 thumb.png
+
