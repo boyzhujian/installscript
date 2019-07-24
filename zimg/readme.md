@@ -23,3 +23,17 @@ curl -H "Content-Type:png" --data-binary @2.png "http://218.244.149.165:4869/upl
 visit  by
 
 http://218.244.149.165:4869/3d4ad10af1c7cb8264cb7888a0d1af5f
+
+
+
+```
+
+   location / {
+        proxy_pass http://zimg or zimg ip:4869;
+        add_header Access-Control-Allow-Origin *;
+        add_header Access-Control-Allow-Methods *;
+        add_header Access-Control-Allow-Headers *;
+#            add_header Content-Type "application/json";
+    }
+
+```
