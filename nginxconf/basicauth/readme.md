@@ -12,3 +12,8 @@ server  location  section
   auth_basic "mso daemon service  auth";
   auth_basic_user_file /opt/nginxauth/newmsoauth.passwd;
 ```
+
+
+
+
+htpasswd nginxauthforregistry  username userpass
