@@ -6,9 +6,9 @@ yum -y install zlib-devel curl-devel openssl-devel perl cpio expat-devel gettext
  
  wget https://github.com/git/git/archive/v2.23.0.tar.gz
  
- ···
+’‘’
  autoconf
 ./configure
 make
 make install
-···
+‘’‘
