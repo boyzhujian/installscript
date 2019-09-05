@@ -21,3 +21,13 @@ A revert is an operation that takes a specified commit and creates a new commit 
 git reset 
 
 A reset is an operation that takes a specified commit and resets the "three trees" to match the state of the repository at that specified commit. A reset can be invoked in three different modes which correspond to the three trees.
+
+git branch -f branname
+
+set  branch to current header
+
+
+git cherry-pick commit1 commit2 
+
+git checkout -b localchan origin/master
+set local branch to remote upstream
