@@ -70,3 +70,11 @@ git diff 显示当前工作区的文件和暂存区文件的差异
 git diff --staged 显示暂存区和HEAD的文件的差异
 
 git diff HEAD 显示工作区和HEAD的文件的差异
+
+
+
+补充：git reset默认参数是--mixed，即上式等价为：git reset hello.js --mixed 。
+
+设置为--hard时会影响到HEAD、暂存区、工作区
+设置为--mixed时只会影响到HEAD、暂存区
+设置为--soft时只会影响到HEAD
