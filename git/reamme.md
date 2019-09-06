@@ -34,3 +34,9 @@ set local branch to remote upstream
 
 
 HEAD指针通常会指向当前所在分支的分支指针。
+
+
+git log --oneline --all --graph
+
+if git pull fail  ,try git pull --rebase 
+git pull --rebase ;git push
