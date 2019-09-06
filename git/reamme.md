@@ -40,3 +40,8 @@ git log --oneline --all --graph
 
 if git pull fail  ,try git pull --rebase 
 git pull --rebase ;git push
+
+### git fetch pull push with arugment
+
+git pull origin bar:foo
+git pull origin master:side
