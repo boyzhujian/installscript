@@ -31,3 +31,6 @@ git cherry-pick commit1 commit2
 
 git checkout -b localchan origin/master
 set local branch to remote upstream
+
+
+HEAD指针通常会指向当前所在分支的分支指针。
