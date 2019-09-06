@@ -59,3 +59,14 @@ git branch -dr <remote>/<branch> # Shorter
 
 git fetch <remote> --prune # Delete multiple obsolete tracking branches
 git fetch <remote> -p      # Shorter
+  
+  
+  
+  
+  通常代码编辑器所做不到的功能是git diff：
+
+git diff 显示当前工作区的文件和暂存区文件的差异
+
+git diff --staged 显示暂存区和HEAD的文件的差异
+
+git diff HEAD 显示工作区和HEAD的文件的差异
