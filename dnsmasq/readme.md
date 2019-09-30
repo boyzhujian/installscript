@@ -1,3 +1,8 @@
+dnsmasq --no-daemon --log-queries
+
+[https://zhuanlan.zhihu.com/p/34607891](https://zhuanlan.zhihu.com/p/34607891)
+
+
 
 docker run
 https://hub.docker.com/r/jpillora/dnsmasq/
