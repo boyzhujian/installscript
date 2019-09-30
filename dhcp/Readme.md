@@ -1,7 +1,9 @@
  /etc/dhcp/dhcpd.conf  
  /etc/dhcpd.conf
+ 
+ [https://blog.csdn.net/kebu12345678/article/details/78435642](https://blog.csdn.net/kebu12345678/article/details/78435642)
 
-
+```
 default-lease-time 600;
 max-lease-time 7200;
 option subnet-mask 255.255.255.0;
@@ -14,7 +16,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 range 192.168.1.10 192.168.1.100;
 range 192.168.1.150 192.168.1.200;
 } 
-
+```
 
 
 
