@@ -1,5 +1,9 @@
 dnsmasq --no-daemon --log-queries
 
+
+[https://blog.csdn.net/nosodeep/article/details/45971677](https://blog.csdn.net/nosodeep/article/details/45971677)
+
+
 [https://zhuanlan.zhihu.com/p/34607891](https://zhuanlan.zhihu.com/p/34607891)
 
 
