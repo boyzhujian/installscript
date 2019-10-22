@@ -50,3 +50,15 @@ shifit+cmd+B  run build task
     ]
 }
 ```
+
+
+### dev  in container
+
+git clone https://github.com/Microsoft/vscode-remote-try-node
+git clone https://github.com/Microsoft/vscode-remote-try-python
+git clone https://github.com/Microsoft/vscode-remote-try-go
+git clone https://github.com/Microsoft/vscode-remote-try-java
+git clone https://github.com/Microsoft/vscode-remote-try-dotnetcore
+git clone https://github.com/Microsoft/vscode-remote-try-php
+git clone https://github.com/Microsoft/vscode-remote-try-rust
+git clone https://github.com/Microsoft/vscode-remote-try-cpp
