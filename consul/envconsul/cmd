@@ -1,0 +1,11 @@
+wget https://releases.hashicorp.com/consul/1.6.2/consul_1.6.2_linux_amd64.zip
+wget https://github.com/hashicorp/envconsul/archive/v0.9.1.tar.gz
+
+consul agent -dev
+consul kv put my-app/address 1.2.3.4
+consul kv put my-app/port 80
+consul kv put my-app/max_conns 5
+envconsul -prefix my-app env
+
+
+
