@@ -8,4 +8,5 @@ consul kv put my-app/max_conns 5
 envconsul -prefix my-app env
 
 
-
+consul kv put -http-addr=10.252.52.191:8500  my-app/address 1.2.3.4
+envconsul -config=config.hcl env|grep address
