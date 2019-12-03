@@ -1,0 +1,10 @@
+[Unit]
+Description=spiped receive for Redis
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/spiped -F -d -s [redis_server_public_IP]:6379 -t [127.0.0.1]:6379 -k /etc/spiped/redis.key
+
+[Install]
+WantedBy=multi-user.target
