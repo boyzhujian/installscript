@@ -1,0 +1,8 @@
+.:53 {
+
+# file db.mydomain.com mydomain.com {
+#        transfer to *
+#    }
+    forward . /etc/resolv.conf
+    log
+}
