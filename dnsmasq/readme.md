@@ -1,3 +1,6 @@
+mac check dns resolver
+scutil --dns | grep 'nameserver\[[0-9]*\]'
+
 dnsmasq --no-daemon --log-queries
 
 
