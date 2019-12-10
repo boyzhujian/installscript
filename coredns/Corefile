@@ -1,3 +1,5 @@
+[coredns manual ](https://coredns.io/manual/toc/)
+
 .:53 {
 
 # file db.mydomain.com mydomain.com {
@@ -5,4 +7,18 @@
 #    }
     forward . /etc/resolv.conf
     log
+}
+
+
+
+# define a snippet
+(snip) {
+    prometheus
+    log
+    errors
+}
+
+. {
+    whoami
+    import snip
 }
