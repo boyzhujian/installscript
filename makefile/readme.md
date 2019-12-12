@@ -26,3 +26,12 @@ and
 ifeq ($(origin FOO), undefined)
 FOO = bar
 endif
+
+
+
+8.10 The origin Function
+The origin function is unlike most other functions in that it does not operate on the values of variables; it tells you something about a variable. Specifically, it tells you where it came from.
+
+The syntax of the origin function is:
+
+$(origin variable)
