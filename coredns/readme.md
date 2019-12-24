@@ -9,9 +9,19 @@ dig etcd.cisco.2500shouhui.com
 
 ```
  etcd cisco.2500shouhui.com {
-   path /cisco
+   path /cisco    # the pathprefix used in etcd  store
    endpoint http://10.252.52.191:2379
    debug
+   #upstream /etc/resolv.conf
+}
+
+
+etcd [ZONES...] {
+    fallthrough [ZONES...]
+    path PATH
+    endpoint ENDPOINT...
+    credentials USERNAME PASSWORD
+    tls CERT KEY CACERT
 }
 ```
 
