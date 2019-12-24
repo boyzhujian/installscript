@@ -23,5 +23,12 @@ etcd [ZONES...] {
     credentials USERNAME PASSWORD
     tls CERT KEY CACERT
 }
+
+
+etcdctl role add coredns
+etcdctl role grant-permission coredns readwrite /cisco
+etcdctl user add coredns
+etcd user grant-role coredns coredns
+etcdctl  user grant-role coredns coredns
 ```
 
