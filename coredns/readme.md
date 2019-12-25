@@ -1,5 +1,7 @@
 https://www.opposhore.com/blog/subdomain_coredns/
 
+[https://www.cnblogs.com/leffss/p/10148507.html](https://www.cnblogs.com/leffss/p/10148507.html)
+
 
 
 etcdctl put  /cisco/com/2500shouhui/cisco/etcd/  '{"host":"10.252.52.191","ttl":60}'
