@@ -16,6 +16,7 @@ https://segmentfault.com/a/1190000016010980(https://segmentfault.com/a/119000001
 
 ## Env
 - ETCDCTL_API=3
+- ETCDCTL_USER=root:pass     why ETCDCTL_USERNAME not working 
 - ETCDCTL_ENDPOINTS='https://127.0.0.1:2379'
 - ETCDCTL_CA_FILE='/srv/etcd/etcd-ca.crt'
 - ETCDCTL_CERT_FILE='/srv/etcd/etcd-client.crt'
