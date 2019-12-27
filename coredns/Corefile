@@ -22,3 +22,34 @@
     whoami
     import snip
 }
+
+
+
+
+
+
+.:53 {
+#file /Conf/zone-cisco cisco.2500shouhui.com
+#   whoami
+    reload
+   log
+   etcd cisco.2500shouhui.com {
+   path /cisco
+   endpoint http://10.252.52.191:2379
+   #credentials coredns msorootpass
+   credentials root pass
+   debug
+}
+ #  health   lolcahost:8091
+ #  prometheus
+}
+
+
+
+mso.cloudsre.xyz {
+ etcd  mso.cloudsre.xyz {
+  path /cloudsremso
+  endpoint http://10.252.52.191:2379
+  credentials root pass
+ }
+}
