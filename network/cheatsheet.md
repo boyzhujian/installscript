@@ -29,3 +29,9 @@ iptables  command
 -p TCP|UDP  -dport 22
 -P
 -o
+
+
+vlan
+ip link add link eth0 name eht0.1 type vlan id  1
+ip link add link eth0 name eht0.2 type vlan id  2
+trunk port will acccept VLAN tagged pakets and will pass them along as appropriate
