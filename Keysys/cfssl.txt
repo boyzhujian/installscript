@@ -1,1 +1,4 @@
 https://github.com/coreos/docs/blob/master/os/generate-self-signed-certificates.md
+
+
+https://github.com/etcd-io/etcd/tree/master/hack/tls-setup
