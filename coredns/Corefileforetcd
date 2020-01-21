@@ -1,0 +1,11 @@
+
+home.cloudsre.xyz {
+  etcd  home.cloudsre.xyz {
+  path /damonhome
+  endpoint https://10.8.0.1:2379
+  credentials root pass
+  tls /opt/ca/etcd1.pem  /opt/ca/etcd1-key.pem /opt/ca/ca.pem
+ }
+}
+
+// /usr/local/bin/coredns -conf /opt/dockerpro/coredns/conf/coredns.conf
