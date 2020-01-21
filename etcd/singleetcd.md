@@ -18,3 +18,6 @@ etcdctl  --cacert  /opt/ca/ca.pem --cert /opt/ca/proxy1.pem --key /opt/ca/proxy1
 
 
 
+
+
+
