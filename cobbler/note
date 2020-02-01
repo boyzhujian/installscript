@@ -1,0 +1,55 @@
+https://www.cnblogs.com/linuxliu/p/7668048.html
+
+http://cobbler.github.io/quickstart/
+
+setenforce 0
+
+vi /etc/selinux/config
+
+yum install system-config-kickstart
+yum install epel-releasey
+yum -y install httpd dhcp tftp python-ctypes cobbler  xinetd cobbler-web
+ 
+systemctl start httpd
+systemctl enable httpd
+systemct1 enable cobblerd
+systemctl start cobblerd
+
+systemctl start tftp
+systemctl enable tftp
+
+ systemctl stop firewalld
+
+https://127.0.0.1/cobbler_web
+cobbler check
+
+
+sed -i 's/^server: 127.0.0.1/server: 10.0.0.101/' /etc/cobbler/settings  
+sed -i 's/^next_server: 127.0.0.1/next_server: 10.0.0.101/' /etc/cobbler/settings 
+
+ cobbler get-loaders
+
+ systemctl start rsyncd 
+ systemctl enable rsyncd 
+
+
+ [root@localhost ~]# openssl passwd -1 -salt '123456' '123456' 
+  openssl passwd -1 -salt 'random-phrase-here' '1234567890'
+
+$1$123456$wOSEtcyiP2N/IfIl15W6Z0
+$1$123456$i2/CWvfLmeta.5p.2JX2t.
+
+[root@localhost ~]# vim /etc/cobbler/settings # 修改settings配置文件中下面位置，把新生成的密码加进去
+default_password_crypted: "$1$123456$wOSEtcyiP2N/IfIl15W6Z0
+
+
+
+
+mount /dev/cdrom /mnt/centos7
+ cobbler import --path=/mnt/centos7 --name=centos7.7  --arch=x86_64
+
+
+
+
+cobbler system add --name=cobbler-test  
+--mac=00:50:56:9c:7f:ef  --interface=eth0 --profile=Centos7.2_x86  --kickstart=/var/lib/cobbler/kickstart/Centos7.2-x86_64.cfg
