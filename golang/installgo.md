@@ -1,6 +1,9 @@
 
 
 
+wget https://studygolang.com/dl/golang/go1.13.7.linux-amd64.tar.gz
+
+
 wget  http://192.168.3.120:7000/tools/go1.12.2.linux-amd64.tar.gz
 
 sudo tar -C /usr/local -xzf  go1.12.2.linux-amd64.tar.gz
