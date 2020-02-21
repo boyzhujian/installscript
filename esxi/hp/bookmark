@@ -1,1 +1,16 @@
 https://www.virtualtothecore.com/manage-an-hp-smart-array-directly-from-vmware-esxi/
+
+https://be-virtual.net/hpe-storage-controller-management-ssacli/
+
+
+# Create - New single disk volume
+./ssacli ctrl slot=1 create type=ld drives=2I:0:8 raid=0 forced
+
+# Create - New spare disk (two defined)
+./ssacli ctrl slot=1 array all add spares=2I:1:6,2I:1:7
+
+# Create - New RAID 1 volume
+./ssacli ctrl slot=1 create type=ld drives=1I:0:1,1I:0:2 raid=1 forced
+
+# Create - New RAID 5 volume
+./ssacli ctrl slot=1 create type=ld drives=1I:0:1,1I:0:2,1I:0:3 raid=5 forced
