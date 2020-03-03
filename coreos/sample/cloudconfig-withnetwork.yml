@@ -1,0 +1,25 @@
+#cloud-config  
+hostname: coreos
+users:  
+  - name: core  
+    ssh-authorized-keys:  
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwKMzeSX8iavwLGuok.....
+  - groups:  
+      - sudo  
+      - docker 
+networkd:
+   units:
+     - name: 10-static.network
+       contents: |
+         [Match]
+         Name=enp0s3
+
+         [Network]
+         Address=192.168.57.102/24
+     - name: 20-dhcp.network
+       contents: |
+         [Match]
+         Name=enp0s8
+
+         [Network]
+         DHCP=yes
