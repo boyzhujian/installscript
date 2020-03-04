@@ -1,0 +1,57 @@
+passwd:
+  users:
+    - name: core
+      ssh_authorized_keys:
+        - ssh-rsa AAAAB3NzaC1yc......RSA密钥从前面的xshell工具里生成的公钥里复制过来
+      groups:
+        - wheel
+        - docker
+
+
+networkd:
+  units:
+    - name: static.network
+      contents: |
+        [Match]
+        Name=ens192
+
+        [Network]
+        Address=10.3.8.101/24
+        Gateway=10.3.8.254
+        DNS=10.1.4.80
+       
+systemd:
+  units:
+    - name: settimezone.service
+      enabled: true
+      contents: |
+        [Unit]
+        Description=Set the time zone
+        [Service]
+        Type=oneshot
+        RemainAfterExit=yes
+        ExecStart=/usr/bin/timedatectl set-timezone Asia/Shanghai
+
+        [Install]
+        WantedBy=multi-user.target
+        
+storage:
+  files:
+    - path: /etc/hostname
+      filesystem: root
+      mode: 0644
+      user:
+        id: 0
+      group:
+        id: 0
+      contents:
+        inline: core1.example.com
+    - path: /etc/hosts
+      filesystem: root
+      mode: 0644
+      user:
+        id: 0
+      group:
+        id: 0
+      contents:
+        local: hosts
