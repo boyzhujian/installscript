@@ -1,0 +1,8 @@
+one card use bridge
+one card use host only network ,set host vmcard to ip address 192.168.80.2
+
+set pfsense lan port to 192.168.80.1
+
+set host route ,route all traffic to 192.168.80.1
+
+route change 0.0.0.0 mask 0.0.0.0 192.168.80.1 metric 10
