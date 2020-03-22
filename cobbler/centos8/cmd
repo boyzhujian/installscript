@@ -1,0 +1,3 @@
+
+cobbler import --name=centos8.1  --path=/run/media/root/CentOS-8-1-1911-x86_64-dvd  --arch=x86_64
+cobbler profile add --name=CentOS-8.1_test --distro=CentOS-8.1-x86_64 --kickstart= /var/lib/cobbler/kickstarts/centos8.cfg
