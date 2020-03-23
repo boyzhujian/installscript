@@ -1,5 +1,8 @@
-https://www.cnblogs.com/linuxliu/p/7668048.html
+distro      import distro
+profile   mutiprofile to one distro.
 
+https://blog.51cto.com/hmtk520/2060670
+https://www.cnblogs.com/linuxliu/p/7668048.html
 http://cobbler.github.io/quickstart/
 
 setenforce 0
