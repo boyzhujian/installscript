@@ -1,4 +1,10 @@
-esxcli
+##
+esxcli esxcli command list 
+
+## esxcli get all running vm
+esxcli vm process list
+ vim-cmd  /vmsvc/getallvms
+ vm-cmd /vmsvc/unregister vmid 
 
 ## Manual mount vmfs disk
 esxcfg-volume -l
