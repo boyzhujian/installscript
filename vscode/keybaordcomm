@@ -1,0 +1,79 @@
+
+windows 
+ctrl Pageup   switch tab
+ctrl   \    split editor   
+ctrl+shift +n    new vscode windows
+ctrl w  close windows 
+ctrl shift `  create terminal
+ctrl j   toggle terminal  show and hidden
+
+ctrl shift +p    rename terminal
+ctrl shift+5   split terminal
+
+ manual set ,see json below  :
+ctrl+windows+alt+1  workbench.action.termmial.focusAtIndex1  manual set foucus on specfic termial
+ctrl+windows+alt+k    toggle terminal with editor  manual edito key bindings json
+ctrl+windows+alt+b  broswer preview open  
+
+
+
+https://code.visualstudio.com/docs/editor/integrated-terminal
+
+
+
+[
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+win+1",
+        "command": "workbench.action.terminal.focusAtIndex1"
+    },
+    {
+        "key": "ctrl+alt+win+2",
+        "command": "workbench.action.terminal.focusAtIndex2"
+    },
+    {
+        "key": "ctrl+alt+win+3",
+        "command": "workbench.action.terminal.focusAtIndex3"
+    },
+    {
+        "key": "ctrl+alt+win+4",
+        "command": "workbench.action.terminal.focusAtIndex4"
+    },
+    {
+        "key": "ctrl+alt+win+5",
+        "command": "workbench.action.terminal.focusAtIndex5"
+    },
+    {
+        "key": "ctrl+alt+win+6",
+        "command": "workbench.action.terminal.focusAtIndex6"
+    },
+    {
+        "key": "ctrl+alt+win+7",
+        "command": "workbench.action.terminal.focusAtIndex7"
+    },
+    {
+        "key": "ctrl+alt+win+8",
+        "command": "workbench.action.terminal.focusAtIndex8"
+    },
+    {
+        "key": "ctrl+alt+win+9",
+        "command": "workbench.action.terminal.focusAtIndex9"
+    },
+    {
+        "key": "ctrl+alt+win+b",
+        "command": "browser-preview.openPreview"
+    },
+    {
+        "key": "ctrl+alt+win+k",
+        "command": "workbench.action.openGlobalKeybindingsFile"
+    }
+]
+
