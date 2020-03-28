@@ -2,7 +2,7 @@
 ### usefulpugin
 - remote develop
 - docker
-
+- browser preivew
 
 
 ### quick key
