@@ -1,0 +1,12 @@
+
+/etc/dnf/dnf.conf add fastestmirror=true
+any url have repodata and Packages folder can be
+
+dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/extras/x86_64/os/
+dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/AppStream/x86_64/os/
+dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/BaseOS/x86_64/os/
+dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/Devel/x86_64/os/
+
+
+
+ dnf install libvirt cockpit cockpit-machines
