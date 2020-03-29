@@ -1,0 +1,20 @@
+SD or microSD card troubleshooting in Gen9 ServersA. The SD or microSD card is not detected/enabled.How to Enable or Disable the Internal SD Card Slot?
+
+1. From the  screen, select System UtilitiesSystem Configuration > BIOS/Platform Configuration (RBSU) > 
+System Options >
+USBand press.Options >
+Internal SD Card Slot  
+Enter
+
+2. Select a setting and press Enter:   Enabled - The server can access the internal SD card slot.   Disabled - The server cannot access the internal SD card slot.
+
+3. Press F10.
+B. The drive boot order is not set to boot from the SD or microSD card.Be sure the drive boot order in the UEFI System Utilities is set so 
+that the server boots from the SD or microSD card.
+How to set the Removable Flash Media to Boot?
+1. From the  screen, select System UtilitiesSystem Configuration > BIOS/Platform Configuration (RBSU) > System Options > USB and press .Options > Removable Flash Media Boot SequenceEnter2. Select a setting and press Enter.   Internal SD Card First - Boots using the internal SD card slot.   Internal Drive Keys First - Boots using the internal USB drive keys.
+   External Drive Keys First - Boots using external USB drive keys.3. Press F10.
+   
+   
+   
+   C. The SD or microSD card is not seated properly.Remove all power from the server. Reseat the SD or microSD card, and then powe
