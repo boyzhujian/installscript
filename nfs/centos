@@ -1,6 +1,17 @@
-yum  install nfs
-systemctl restart nfs
+yum install -y nfs-utils
+
+
+systemctl enable rpcbind.service
+systemctl enable nfs-server.service
+systemctl start rpcbind.service
+systemctl start nfs-server.service
 
 
 vi /etc/exports
-exports -rv
+
+/mnt/sdb1/nfsshare 192.168.3.0/24(rw,sync,fsid=0)
+
+rpcinfo -p
+
+exportfs -r
+exportfs
