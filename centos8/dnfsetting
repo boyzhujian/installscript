@@ -8,5 +8,6 @@ dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/BaseOS/
 dnf config-manager --add-repo https://mirrors.aliyun.com/centos/8.1.1911/Devel/x86_64/os/
 
 
+ rpm --import public.gpg.key
 
  dnf install libvirt cockpit cockpit-machines
