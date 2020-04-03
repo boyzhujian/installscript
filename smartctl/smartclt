@@ -1,0 +1,12 @@
+首先通过smartctl -H /dev/sda检查磁盘健康状态，
+然后smartctl -a /dev/sda查看磁盘详细情况，
+再对磁盘进行短期测试smartctl -t short /dev/sda，
+最后查看磁盘测试结果smartctl -l selftest /dev/sda，
+基本磁盘健康状态就可以定位出来，
+最后检查磁盘错误日志smartctl -l error /dev/sdb
+
+
+ smartctl -a /dev/sde -d cciss,4
+ 
+ 
+ use smartclt under  linux to quick test disks.
