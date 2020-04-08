@@ -1,0 +1,15 @@
+run kibana
+  NODE_OPTIONS="--max_old_space_size=4096" &&  export  KIBANA_ELASTICSEARCH_ENDPOINT=http://10.241.91.158:30549/
+  && ./runkibana.sh
+  
+  
+  https://www.elastic.co/guide/en/kibana/current/upgrade.html
+  
+ Before you upgrade Kibana:
+
+   - Consult the breaking changes.
+   - Before you upgrade production servers, test the upgrades in a dev environment.
+   - Back up your data with Elasticsearch snapshots. To roll back to an earlier version, you must have a backup of your data.
+   - If you are using custom plugins, check that a compatible version is available.
+   - Shut down all Kibana nodes. Running more than one Kibana version against the same Elasticseach index is unsupported. If you upgrade while older Kibana nodes are running, the upgrade can fail.
+
