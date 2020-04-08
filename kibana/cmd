@@ -1,0 +1,2 @@
+ NODE_OPTIONS="--max_old_space_size=4096" &&  export  KIBANA_ELASTICSEARCH_ENDPOINT=http://173.39.230.83:9300/ && ./runkibana.sh
+ 
