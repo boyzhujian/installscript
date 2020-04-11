@@ -1,5 +1,5 @@
 [Unit]
-Description=aliyun-assist
+Description=
 After=network-online.target
 [Service]
 Type=simple

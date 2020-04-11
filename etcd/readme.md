@@ -22,3 +22,6 @@ https://segmentfault.com/a/1190000016010980(https://segmentfault.com/a/119000001
 - ETCDCTL_CERT_FILE='/srv/etcd/etcd-client.crt'
 - ETCDCTL_KEY_FILE='/srv/etcd/etcd-client.key'
 
+
+##   Integration tools
+https://github.com/etcd-io/etcd/blob/master/Documentation/integrations.md

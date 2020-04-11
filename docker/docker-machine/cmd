@@ -1,0 +1,5 @@
+docker-machine create --driver vmwarevsphere --vmwarevsphere-username=user --vmwarevsphere-password=SECRET vm
+
+
+https://docs.docker.com/machine/drivers/vsphere/
+https://docs.docker.com/machine/drivers/vsphere/
