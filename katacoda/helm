@@ -1,0 +1,29 @@
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm env
+helm search hub redis
+helm repo list
+helm search repo redis
+helm show chart stable/redis
+helm show readme stable/redis
+kubectl create namespace redis
+helm install my-redis stable/redis --namespace redis
+watch kubectl get deployments,pods,services -n redis
+kubectl apply -f pv.yaml
+
+
+
+
+
+helm search repo postgres
+helm search repo sonarqube
+helm search repo rabbitmq
+helm search repo kafka
+helm search repo prometheus-operator
+helm search repo tensorflow
+helm search repo stable/redis
+
+
+helm ceate app-chart
+helm upgrade my-app ./app-chart --install --reuse-values --set service.type=NodePort
+kubectl patch service my-app-app-chart --type='json' --patch='[{"op": "replace", "path": "/spec/ports/0/nodePort", "value":31111}]'
