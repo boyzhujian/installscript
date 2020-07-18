@@ -1,0 +1,3 @@
+* domain
+
+ certbot certonly  -d "*.h.cloudsre.xyz"  --manual --preferred-challenges dns-01  --server https://acme-v02.api.letsencrypt.org/directory
