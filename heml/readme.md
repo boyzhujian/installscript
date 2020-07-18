@@ -6,3 +6,6 @@ https://developer.aliyun.com/hub
  
  
  helm search repo   etcd
+ 
+ 
+ https://helm.sh/docs/intro/using_helm/
