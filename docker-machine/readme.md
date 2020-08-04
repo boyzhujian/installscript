@@ -38,3 +38,7 @@ rancher47
    --vmwarevsphere-username                                                                             vSphere username [$VSPHERE_USERNAME]
    --vmwarevsphere-vcenter                                                                              vSphere IP/hostname for vCenter [$VSPHERE_VCENTER]
    --vmwarevsphere-vcenter-port "443"
+
+
+
+docker-machine create -d virtualbox --virtualbox-boot2docker-url=/home/zhoulei/.docker/machine/cache/boot2docker.iso --engine-registry-mirror=https://3qtk5f5j.mirror.aliyuncs.com node2
