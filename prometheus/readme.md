@@ -1,6 +1,13 @@
 
 https://prometheus.io/download/
 
+http://www.linuxe.cn/sort/Prometheus
+
+小团队从0搭建devOPS平台-Alertmanager报警平台
+
+[https://www.jianshu.com/p/0dbece52b488](https://www.jianshu.com/p/0dbece52b488)
+
+
 
 <metric name>{<label name>=<label value>, ...}
 
@@ -17,3 +24,10 @@ counter
 guage
 Histogram
 Summary
+
+
+Opening storage failed lock DB directory: resource temporarily unavailable
+ -   Prometheus doesn't permissions to write this directory.
+ -   Or another process is running in parallel and already acquired the lock.
+ -   Or you're using a file system (such as NFS) which isn't fully supported by Prometheus.
+

@@ -1,0 +1,22 @@
+
+[Unit]
+Description=Prometheus Node Exporter
+After=network.target
+[Service]
+ExecStart=/usr/local/go/bin/node_exporter
+User=prometheus
+#change  Execstart and User 
+[Install]
+WantedBy=multi-user.target
+
+
+
+# useradd prometheus -s /sbin/nologin
+# tar zxvf node_exporter-0.18.1.linux-amd64.tar.gz -C /data/
+# mv /data/node_exporter-0.18.1.linux-amd64 /data/node_exporter
+# chown prometheus:prometheus -R /data/node_exporter
+
+#vi /etc/systemd/system/node-exporter.service
+# systemctl daemon-reload
+# systemctl enable node-exporter
+# systemctl start node-exporter
