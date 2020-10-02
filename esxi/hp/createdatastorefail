@@ -1,0 +1,21 @@
+1.     Show connected disks.
+
+          ls -lha /vmfs/devices/disks/
+
+               (Verify the disk is seen.  You will probably see your disk ID then :1.  This is a partition on the disk.  We only need to work about the main disk ID.)
+
+ 
+
+2.     Show the error on disk.
+
+          partedUtil getptbl /vmfs/devices/disks/(disk ID)
+
+               (It will probably indicate that the GPT is located beyond the end of the disk.)
+
+ 
+
+3.     Wipe disk and rewrite with a basic MSDOS partion.
+
+          partedUtil setptbl /vmfs/devices/disks/(disk ID) msdos
+
+               (The output from this should be similar to msdos and the next line will be o o o o)
