@@ -1,3 +1,10 @@
+dhclient -r   //release  ip
+
+dhclient eth0  //dchp fetch ip 
+
+ip a    //show ip
+
+
  /etc/dhcp/dhcpd.conf  
  /etc/dhcpd.conf
  
